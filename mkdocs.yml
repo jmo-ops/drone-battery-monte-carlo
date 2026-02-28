@@ -1,0 +1,11 @@
+site_name: Drone Battery Monte Carlo Docs
+theme:
+  name: material
+  palette:
+    scheme: slate # Dark mode, great for engineering projects
+    primary: indigo
+
+nav:
+  - Home: index.md
+  - Simulation Logic: logic.md
+  - GUI Guide: gui.md
