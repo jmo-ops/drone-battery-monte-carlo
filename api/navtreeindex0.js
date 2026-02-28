@@ -1,9 +1,7 @@
 var NAVTREEINDEX0 =
 {
 "annotated.html":[0,0],
-"battery_v2_8py.html":[1,0,0],
 "classbattery_v2_1_1_battery_config.html":[0,0,0,0],
-"classbattery_v2_1_1_battery_config.html#a01bd6c0552bae56729b044ed2ce12861":[0,0,0,0,0],
 "classbattery_v2_1_1_mission_config.html":[0,0,0,1],
 "classbattery_v2_1_1_monte_carlo_g_u_i.html":[0,0,0,2],
 "classbattery_v2_1_1_monte_carlo_g_u_i.html#a51e7e587954e3cceaea5ff17ad8aa75d":[0,0,0,2,4],
@@ -14,7 +12,6 @@ var NAVTREEINDEX0 =
 "classbattery_v2_1_1_monte_carlo_g_u_i.html#a9ac8fb9e7c9b79aac8a389fb85026221":[0,0,0,2,2],
 "classbattery_v2_1_1_monte_carlo_g_u_i.html#ad20f02647e50ac7a533c9e72e8071130":[0,0,0,2,6],
 "classes.html":[0,1],
-"files.html":[1,0],
 "functions.html":[0,2,0],
 "functions_func.html":[0,2,1],
 "index.html":[],
