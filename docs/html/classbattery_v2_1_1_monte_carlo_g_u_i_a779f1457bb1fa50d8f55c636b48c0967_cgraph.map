@@ -1,0 +1,11 @@
+<map id="batteryV2.MonteCarloGUI._build_widgets" name="batteryV2.MonteCarloGUI._build_widgets">
+<area shape="rect" id="Node000001" title="Builds the primary simulation dashboard." alt="" coords="5,39,182,81"/>
+<area shape="rect" id="Node000002" href="$classbattery_v2_1_1_monte_carlo_g_u_i.html#a611efd143a0180842632d13d81ce106c" title="Constructs the &quot;Extreme Conditions&quot; dashboard." alt="" coords="230,5,424,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,45,214,40,215,45,182,50"/>
+<area shape="rect" id="Node000004" href="$classbattery_v2_1_1_monte_carlo_g_u_i.html#ad20f02647e50ac7a533c9e72e8071130" title="Executes the standard Monte Carlo simulation." alt="" coords="230,72,424,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="182,70,215,75,214,80,182,75"/>
+<area shape="rect" id="Node000003" href="$classbattery_v2_1_1_monte_carlo_g_u_i.html#a51e7e587954e3cceaea5ff17ad8aa75d" title="Refreshes the histogram for extreme simulation results." alt="" coords="472,5,652,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="424,24,457,24,457,29,424,29"/>
+<area shape="rect" id="Node000005" href="$classbattery_v2_1_1_monte_carlo_g_u_i.html#a67f25aa73b33a439ae78ad47aebbddc6" title="Updates the histogram display for extreme simulation results." alt="" coords="474,72,650,115"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="424,91,458,91,458,96,424,96"/>
+</map>
