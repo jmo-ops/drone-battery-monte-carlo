@@ -1,0 +1,46 @@
+\doxysection{battery\+V2.\+Mission\+Config Class Reference}
+\hypertarget{classbattery_v2_1_1_mission_config}{}\label{classbattery_v2_1_1_mission_config}\index{batteryV2.MissionConfig@{batteryV2.MissionConfig}}
+
+
+Collaboration diagram for battery\+V2.\+Mission\+Config:\+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classbattery_v2_1_1_mission_config__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classbattery_v2_1_1_mission_config_a76c5beb1cec730b934f72b9c4b3406eb}\label{classbattery_v2_1_1_mission_config_a76c5beb1cec730b934f72b9c4b3406eb} 
+{\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, float nominal\+\_\+distance\+\_\+mi=15.\+0, float cruise\+\_\+speed\+\_\+mph=25.\+0, float safety\+\_\+energy\+\_\+fraction=0.\+10)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classbattery_v2_1_1_mission_config_a52f42fc3b8a57776cf221f54000a23f8}\label{classbattery_v2_1_1_mission_config_a52f42fc3b8a57776cf221f54000a23f8} 
+{\bfseries nominal\+\_\+distance\+\_\+mi} = nominal\+\_\+distance\+\_\+mi
+\item 
+\Hypertarget{classbattery_v2_1_1_mission_config_a6c1870e531f7dc8a548ff434820a2ab1}\label{classbattery_v2_1_1_mission_config_a6c1870e531f7dc8a548ff434820a2ab1} 
+{\bfseries cruise\+\_\+speed\+\_\+mph} = cruise\+\_\+speed\+\_\+mph
+\item 
+\Hypertarget{classbattery_v2_1_1_mission_config_a4671569ebc43648aa8346998bf3fc733}\label{classbattery_v2_1_1_mission_config_a4671569ebc43648aa8346998bf3fc733} 
+{\bfseries safety\+\_\+energy\+\_\+fraction} = safety\+\_\+energy\+\_\+fraction
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@brief Mission-level constants used by the simulator.
+
+The actual mission distance per trial is:
+    distance_mi = nominal_distance_mi * distance_factor
+
+@var nominal_distance_mi Baseline mission distance in miles.
+@var cruise_speed_mph Cruise speed (mph), assumed constant.
+@var safety_energy_fraction Fraction of capacity reserved as safety margin (0–1).
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+battery\+V2.\+py\end{DoxyCompactItemize}
