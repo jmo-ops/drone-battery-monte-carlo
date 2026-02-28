@@ -188,11 +188,6 @@ Sets up a high-\/stress testing environment including:\+
 \item An informational label describing the "{}\+Extreme"{} stochastic biases (wind, temp, etc.).
 \item A scrollable summary text area for distribution results.
 \item A plot container for visualizing energy distributions. 
-\begin{DoxyParams}{Parameters}
-{\em parent} & The parent frame (typically the Extreme Conditions tab). \\
-\hline
-\end{DoxyParams}
-
 \end{DoxyItemize}Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -213,7 +208,7 @@ Executes the standard Monte Carlo simulation.
 Performs the following process:\+
 \begin{DoxyEnumerate}
 \item Validates user input for the number of runs.
-\item Calls run\+\_\+monte\+\_\+carlo() to perform stochastic trials for each battery.
+\item Calls \doxylink{battery_v2_8py_a6767ab4344f7effdf944b81bcc495ead}{run\+\_\+monte\+\_\+carlo()} to perform stochastic trials for each battery.
 \item Generates statistical summaries (mean, P5, P95) for mission results.
 \item Calculates energy usage metrics and delivery throughput.
 \item Performs a delta comparison if multiple batteries are configured. 
@@ -293,4 +288,4 @@ battery\+V2.\+Monte\+Carlo\+GUI.\+mission}
 
 The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
 \item 
-battery\+V2.\+py\end{DoxyCompactItemize}
+\doxymbox{\hyperlink{battery_v2_8py}{battery\+V2.\+py}}\end{DoxyCompactItemize}

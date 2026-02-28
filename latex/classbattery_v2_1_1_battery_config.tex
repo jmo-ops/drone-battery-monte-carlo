@@ -12,8 +12,7 @@ Collaboration diagram for battery\+V2.\+Battery\+Config:\+\nopagebreak
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classbattery_v2_1_1_battery_config_a01bd6c0552bae56729b044ed2ce12861}\label{classbattery_v2_1_1_battery_config_a01bd6c0552bae56729b044ed2ce12861} 
-{\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, str key, str label, float capacity\+\_\+wh, float base\+\_\+power\+\_\+w, float payload\+\_\+penalty\+\_\+w\+\_\+per\+\_\+lb, float wind\+\_\+penalty\+\_\+w\+\_\+per\+\_\+mph, float cold\+\_\+capacity\+\_\+penalty\+\_\+per\+\_\+deg, float cold\+\_\+power\+\_\+penalty\+\_\+per\+\_\+deg=0.\+0)
+\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_a01bd6c0552bae56729b044ed2ce12861}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str key, str label, float capacity\+\_\+wh, float base\+\_\+power\+\_\+w, float payload\+\_\+penalty\+\_\+w\+\_\+per\+\_\+lb, float wind\+\_\+penalty\+\_\+w\+\_\+per\+\_\+mph, float cold\+\_\+capacity\+\_\+penalty\+\_\+per\+\_\+deg, float cold\+\_\+power\+\_\+penalty\+\_\+per\+\_\+deg=0.\+0)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -56,6 +55,29 @@ Collaboration diagram for battery\+V2.\+Battery\+Config:\+\nopagebreak
 \end{DoxyVerb}
  
 
+\label{doc-constructors}
+\Hypertarget{classbattery_v2_1_1_battery_config_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbattery_v2_1_1_battery_config_a01bd6c0552bae56729b044ed2ce12861}\index{batteryV2.BatteryConfig@{batteryV2.BatteryConfig}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!batteryV2.BatteryConfig@{batteryV2.BatteryConfig}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_battery_config_a01bd6c0552bae56729b044ed2ce12861} 
+battery\+V2.\+Battery\+Config.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{str}]{key}{, }\item[{str}]{label}{, }\item[{float}]{capacity\+\_\+wh}{, }\item[{float}]{base\+\_\+power\+\_\+w}{, }\item[{float}]{payload\+\_\+penalty\+\_\+w\+\_\+per\+\_\+lb}{, }\item[{float}]{wind\+\_\+penalty\+\_\+w\+\_\+per\+\_\+mph}{, }\item[{float}]{cold\+\_\+capacity\+\_\+penalty\+\_\+per\+\_\+deg}{, }\item[{float }]{cold\+\_\+power\+\_\+penalty\+\_\+per\+\_\+deg}{ = {\ttfamily 0.0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a battery configuration.
+
+Args:
+key: Short ID used internally.
+label: Display name for plots/GUI.
+capacity_wh: Nominal energy capacity (Wh).
+base_power_w: Baseline cruise power draw (W).
+payload_penalty_w_per_lb: Added power per lb payload (W/lb).
+wind_penalty_w_per_mph: Added power per mph headwind (W/mph).
+cold_capacity_penalty_per_deg: Fractional capacity loss per deg below nominal.
+cold_power_penalty_per_deg: Extra power per deg below nominal.
+\end{DoxyVerb}
+ 
+
 The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
 \item 
-battery\+V2.\+py\end{DoxyCompactItemize}
+\doxymbox{\hyperlink{battery_v2_8py}{battery\+V2.\+py}}\end{DoxyCompactItemize}
