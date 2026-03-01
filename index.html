@@ -349,6 +349,36 @@
 
 
 <h1 id="drone-battery-monte-carlo">Drone Battery Monte Carlo</h1>
+<h1 id="drone-battery-monte-carlo_1">Drone Battery Monte Carlo</h1>
+<p><strong>Monte Carlo simulation + GUI for comparing drone battery configurations.</strong></p>
+<p>This project runs a Monte Carlo process generator for two battery configurations (e.g., Li-ion vs. LiPo) under uncertainty in <strong>wind, temperature, payload, and distance</strong>. It reports <strong>success probability</strong> given a <strong>safety reserve</strong> requirement and plots <strong>distributions of remaining energy</strong>.</p>
+<hr />
+<h2 id="key-concepts">Key concepts</h2>
+<ul>
+<li><strong>Nominal sampling</strong> uses <strong>uniform</strong> distributions across realistic ranges.</li>
+<li><strong>Extreme sampling</strong> uses <strong>triangular</strong> distributions biased toward <strong>worst-case conditions</strong>:</li>
+<li>higher wind</li>
+<li>colder temperatures</li>
+<li>heavier payload</li>
+<li>longer distance</li>
+</ul>
+<hr />
+<h2 id="units">Units</h2>
+<ul>
+<li><strong>Distance:</strong> miles  </li>
+<li><strong>Speed:</strong> mph  </li>
+<li><strong>Temperature:</strong> °F  </li>
+<li><strong>Wind:</strong> mph  </li>
+<li><strong>Payload:</strong> lb  </li>
+<li><strong>Energy:</strong> Wh  </li>
+<li><strong>Power:</strong> W  </li>
+</ul>
+<hr />
+<h2 id="metadata">Metadata</h2>
+<ul>
+<li><strong>Author:</strong> TEAM 3  </li>
+<li><strong>Date:</strong> 2026-02-28</li>
+</ul>
 <p>This project compares drone battery options using a Monte Carlo simulation model under varying mission conditions (e.g., payload, wind, and temperature). It includes:</p>
 <ul>
 <li>A <strong>simulation engine</strong> that estimates energy use and mission success</li>
