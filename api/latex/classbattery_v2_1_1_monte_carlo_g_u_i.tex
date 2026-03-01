@@ -1,0 +1,372 @@
+\doxysection{battery\+V2.\+Monte\+Carlo\+GUI Class Reference}
+\hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i}{}\label{classbattery_v2_1_1_monte_carlo_g_u_i}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+
+
+Collaboration diagram for battery\+V2.\+Monte\+Carlo\+GUI:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbattery_v2_1_1_monte_carlo_g_u_i__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_ac2e2abc2276416044e75a6507f35da40}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a11b3b7dc935da5864fd378880fae1ec9}{root}})
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_ad20f02647e50ac7a533c9e72e8071130}{run\+\_\+simulation}} (self)
+\begin{DoxyCompactList}\small\item\em Executes the standard Monte Carlo simulation. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a611efd143a0180842632d13d81ce106c}{run\+\_\+extreme\+\_\+simulation}} (self)
+\begin{DoxyCompactList}\small\item\em Constructs the "{}\+Extreme Conditions"{} dashboard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a11b3b7dc935da5864fd378880fae1ec9}{root}} = root
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_aa0e0811fecfeb29ef9d85fc74ab5f5a8}{battery\+\_\+a}}
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_aad7ef84a5d22a438d0d89af2e643f2a6}{battery\+\_\+b}}
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a9fe135f5702eaf93ae1c9671e881277e}{mission}}
+\item 
+list \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a204491c01b21643fd70ea0be43dd3945}{batteries}} = \+[self.\+battery\+\_\+a, self.\+battery\+\_\+b]\+
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a869f1785f18eff1ac47993eb339ff215}{figure}} = None
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a2fd231a1528afe574184cc9b85702ee7}{canvas}} = None
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_adbdfebef15811c31c872900b1f12ca04}{extreme\+\_\+figure}} = None
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_ab3f7f16a6436ccab56016e924aded8fb}{extreme\+\_\+canvas}} = None
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a40ced7de3cab48d58c93553d3800be3b}{num\+\_\+runs\+\_\+var}} = tk.\+String\+Var(value="{}500"{})
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a3822324ef896924528e62127cf1516ae}{summary\+\_\+text}} = tk.\+Text(summary\+\_\+inner, height=20, wrap="{}word"{})
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a79648fad4edaaa0ea564c33376edd2c0}{plot\+\_\+container}} = plot\+\_\+frame
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_aa87e9eefcf141bfe28697282bd23a9de}{extreme\+\_\+runs\+\_\+var}} = tk.\+String\+Var(value="{}500"{})
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a7b197ed8bdbcf8097a6ae1ff26e94243}{extreme\+\_\+summary\+\_\+text}} = tk.\+Text(summary\+\_\+inner, height=20, wrap="{}word"{})
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_adbbffceb9b6606d92e028af940a6eca1}{extreme\+\_\+plot\+\_\+container}} = plot\+\_\+frame
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a8945fb5c765a8525ce45e40daabf2065}{\+\_\+build\+\_\+tabs}} (self)
+\begin{DoxyCompactList}\small\item\em Constructs the tabbed interface for the application. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a779f1457bb1fa50d8f55c636b48c0967}{\+\_\+build\+\_\+widgets}} (self, parent)
+\begin{DoxyCompactList}\small\item\em Builds the primary simulation dashboard. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a61633bfee5719a0c083e20e04eeed9c7}{\+\_\+build\+\_\+extreme\+\_\+widgets}} (self, parent)
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a67f25aa73b33a439ae78ad47aebbddc6}{\+\_\+plot\+\_\+distributions}} (self, results)
+\begin{DoxyCompactList}\small\item\em Updates the histogram display for extreme simulation results. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a51e7e587954e3cceaea5ff17ad8aa75d}{\+\_\+plot\+\_\+extreme\+\_\+distributions}} (self, results)
+\begin{DoxyCompactList}\small\item\em Refreshes the histogram for extreme simulation results. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a9ac8fb9e7c9b79aac8a389fb85026221}{\+\_\+generate\+\_\+parameters\+\_\+summary}} (self)
+\begin{DoxyCompactList}\small\item\em Generates a formatted string summarizing all mission and battery constants. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}@brief Tkinter GUI for running nominal/extreme Monte Carlo simulations.
+
+Provides:
+  - "Simulation" tab: nominal Monte Carlo + histogram plot
+  - "Extreme Conditions" tab: extreme-biased Monte Carlo + histogram plot
+  - "Parameters Summary" tab: displays configured ranges + battery parameters
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_ac2e2abc2276416044e75a6507f35da40}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_ac2e2abc2276416044e75a6507f35da40} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{root}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a61633bfee5719a0c083e20e04eeed9c7}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_build\_extreme\_widgets@{\_build\_extreme\_widgets}}
+\index{\_build\_extreme\_widgets@{\_build\_extreme\_widgets}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{\_build\_extreme\_widgets()}{\_build\_extreme\_widgets()}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a61633bfee5719a0c083e20e04eeed9c7} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+build\+\_\+extreme\+\_\+widgets (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{parent}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a8945fb5c765a8525ce45e40daabf2065}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_build\_tabs@{\_build\_tabs}}
+\index{\_build\_tabs@{\_build\_tabs}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{\_build\_tabs()}{\_build\_tabs()}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a8945fb5c765a8525ce45e40daabf2065} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+build\+\_\+tabs (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructs the tabbed interface for the application. 
+
+Uses a ttk.\+Notebook to create three distinct sections:\+
+\begin{DoxyEnumerate}
+\item Simulation:\+ For standard Monte Carlo runs.
+\item Parameters Summary:\+ Displays a read-\/only text summary of battery profiles.
+\item Extreme Conditions:\+ For high-\/stress "{}torture tests"{} with biased inputs 
+\end{DoxyEnumerate}Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbattery_v2_1_1_monte_carlo_g_u_i_a8945fb5c765a8525ce45e40daabf2065_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a779f1457bb1fa50d8f55c636b48c0967}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_build\_widgets@{\_build\_widgets}}
+\index{\_build\_widgets@{\_build\_widgets}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{\_build\_widgets()}{\_build\_widgets()}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a779f1457bb1fa50d8f55c636b48c0967} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+build\+\_\+widgets (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{parent}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Builds the primary simulation dashboard. 
+
+Sets up the \textquotesingle{}Simulation\textquotesingle{} tab, which includes:\+
+\begin{DoxyItemize}
+\item A \textquotesingle{}Simulation Settings\textquotesingle{} group for configuring run counts.
+\item A \textquotesingle{}Summary (Distribution)\textquotesingle{} group for displaying output statistics. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget (typically the simulation tab frame). \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a9ac8fb9e7c9b79aac8a389fb85026221}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_generate\_parameters\_summary@{\_generate\_parameters\_summary}}
+\index{\_generate\_parameters\_summary@{\_generate\_parameters\_summary}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{\_generate\_parameters\_summary()}{\_generate\_parameters\_summary()}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a9ac8fb9e7c9b79aac8a389fb85026221} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+generate\+\_\+parameters\+\_\+summary (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Generates a formatted string summarizing all mission and battery constants. 
+
+Aggregates nominal/\+extreme sampling ranges, mission setup (distance, speed), and detailed battery profiles (capacity, penalties) for the UI summary tab. \begin{DoxyReturn}{Returns}
+A multi-\/line string containing the full parameter report. 
+\end{DoxyReturn}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a67f25aa73b33a439ae78ad47aebbddc6}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_plot\_distributions@{\_plot\_distributions}}
+\index{\_plot\_distributions@{\_plot\_distributions}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{\_plot\_distributions()}{\_plot\_distributions()}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a67f25aa73b33a439ae78ad47aebbddc6} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+plot\+\_\+distributions (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{results}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Updates the histogram display for extreme simulation results. 
+
+Functionally identical to \+\_\+plot\+\_\+distributions but targets the Extreme Conditions UI container and uses biased result data. 
+\begin{DoxyParams}{Parameters}
+{\em results} & A dictionary containing extreme/\+biased simulation data. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a51e7e587954e3cceaea5ff17ad8aa75d}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_plot\_extreme\_distributions@{\_plot\_extreme\_distributions}}
+\index{\_plot\_extreme\_distributions@{\_plot\_extreme\_distributions}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{\_plot\_extreme\_distributions()}{\_plot\_extreme\_distributions()}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a51e7e587954e3cceaea5ff17ad8aa75d} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+plot\+\_\+extreme\+\_\+distributions (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{results}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Refreshes the histogram for extreme simulation results. 
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a611efd143a0180842632d13d81ce106c}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!run\_extreme\_simulation@{run\_extreme\_simulation}}
+\index{run\_extreme\_simulation@{run\_extreme\_simulation}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{run\_extreme\_simulation()}{run\_extreme\_simulation()}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a611efd143a0180842632d13d81ce106c} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+run\+\_\+extreme\+\_\+simulation (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Constructs the "{}\+Extreme Conditions"{} dashboard. 
+
+Sets up a high-\/stress testing environment including:\+
+\begin{DoxyItemize}
+\item A \textquotesingle{}Extreme Simulation Settings\textquotesingle{} frame for run count configuration.
+\item An informational label describing the "{}\+Extreme"{} stochastic biases (wind, temp, etc.).
+\item A scrollable summary text area for distribution results.
+\item A plot container for visualizing energy distributions. 
+\end{DoxyItemize}Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbattery_v2_1_1_monte_carlo_g_u_i_a611efd143a0180842632d13d81ce106c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_ad20f02647e50ac7a533c9e72e8071130}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!run\_simulation@{run\_simulation}}
+\index{run\_simulation@{run\_simulation}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{run\_simulation()}{run\_simulation()}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_ad20f02647e50ac7a533c9e72e8071130} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+run\+\_\+simulation (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Executes the standard Monte Carlo simulation. 
+
+Performs the following process:\+
+\begin{DoxyEnumerate}
+\item Validates user input for the number of runs.
+\item Calls \doxylink{namespacebattery_v2_a6767ab4344f7effdf944b81bcc495ead}{run\+\_\+monte\+\_\+carlo()} to perform stochastic trials for each battery.
+\item Generates statistical summaries (mean, P5, P95) for mission results.
+\item Calculates energy usage metrics and delivery throughput.
+\item Performs a delta comparison if multiple batteries are configured. 
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & Raised if the run count is not a positive integer. \\
+\hline
+\end{DoxyExceptions}
+
+\end{DoxyEnumerate}Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbattery_v2_1_1_monte_carlo_g_u_i_ad20f02647e50ac7a533c9e72e8071130_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a204491c01b21643fd70ea0be43dd3945}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!batteries@{batteries}}
+\index{batteries@{batteries}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{batteries}{batteries}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a204491c01b21643fd70ea0be43dd3945} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+batteries = \+[self.\+battery\+\_\+a, self.\+battery\+\_\+b]\+}
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_aa0e0811fecfeb29ef9d85fc74ab5f5a8}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!battery\_a@{battery\_a}}
+\index{battery\_a@{battery\_a}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{battery\_a}{battery\_a}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_aa0e0811fecfeb29ef9d85fc74ab5f5a8} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+battery\+\_\+a}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ BatteryConfig(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ key=\textcolor{stringliteral}{"{}A"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ label=\textcolor{stringliteral}{"{}Li-\/ion\ (NMC,\ cylindrical)"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ capacity\_wh=300.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ base\_power\_w=180.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ payload\_penalty\_w\_per\_lb=10.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ wind\_penalty\_w\_per\_mph=1.5,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ cold\_capacity\_penalty\_per\_deg=0.005,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ cold\_power\_penalty\_per\_deg=0.002,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_aad7ef84a5d22a438d0d89af2e643f2a6}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!battery\_b@{battery\_b}}
+\index{battery\_b@{battery\_b}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{battery\_b}{battery\_b}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_aad7ef84a5d22a438d0d89af2e643f2a6} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+battery\+\_\+b}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ BatteryConfig(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ key=\textcolor{stringliteral}{"{}B"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ label=\textcolor{stringliteral}{"{}LiPo\ (pouch,\ high-\/power)"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ capacity\_wh=260.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ base\_power\_w=170.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ payload\_penalty\_w\_per\_lb=11.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ wind\_penalty\_w\_per\_mph=1.2,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ cold\_capacity\_penalty\_per\_deg=0.004,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ cold\_power\_penalty\_per\_deg=0.0015,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a2fd231a1528afe574184cc9b85702ee7}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!canvas@{canvas}}
+\index{canvas@{canvas}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{canvas}{canvas}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a2fd231a1528afe574184cc9b85702ee7} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+canvas = None}
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_ab3f7f16a6436ccab56016e924aded8fb}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!extreme\_canvas@{extreme\_canvas}}
+\index{extreme\_canvas@{extreme\_canvas}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{extreme\_canvas}{extreme\_canvas}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_ab3f7f16a6436ccab56016e924aded8fb} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+extreme\+\_\+canvas = None}
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_adbdfebef15811c31c872900b1f12ca04}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!extreme\_figure@{extreme\_figure}}
+\index{extreme\_figure@{extreme\_figure}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{extreme\_figure}{extreme\_figure}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_adbdfebef15811c31c872900b1f12ca04} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+extreme\+\_\+figure = None}
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_adbbffceb9b6606d92e028af940a6eca1}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!extreme\_plot\_container@{extreme\_plot\_container}}
+\index{extreme\_plot\_container@{extreme\_plot\_container}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{extreme\_plot\_container}{extreme\_plot\_container}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_adbbffceb9b6606d92e028af940a6eca1} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+extreme\+\_\+plot\+\_\+container = plot\+\_\+frame}
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_aa87e9eefcf141bfe28697282bd23a9de}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!extreme\_runs\_var@{extreme\_runs\_var}}
+\index{extreme\_runs\_var@{extreme\_runs\_var}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{extreme\_runs\_var}{extreme\_runs\_var}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_aa87e9eefcf141bfe28697282bd23a9de} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+extreme\+\_\+runs\+\_\+var = tk.\+String\+Var(value="{}500"{})}
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a7b197ed8bdbcf8097a6ae1ff26e94243}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!extreme\_summary\_text@{extreme\_summary\_text}}
+\index{extreme\_summary\_text@{extreme\_summary\_text}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{extreme\_summary\_text}{extreme\_summary\_text}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a7b197ed8bdbcf8097a6ae1ff26e94243} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+extreme\+\_\+summary\+\_\+text = tk.\+Text(summary\+\_\+inner, height=20, wrap="{}word"{})}
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a869f1785f18eff1ac47993eb339ff215}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!figure@{figure}}
+\index{figure@{figure}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{figure}{figure}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a869f1785f18eff1ac47993eb339ff215} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+figure = None}
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a9fe135f5702eaf93ae1c9671e881277e}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!mission@{mission}}
+\index{mission@{mission}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{mission}{mission}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a9fe135f5702eaf93ae1c9671e881277e} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+mission}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ MissionConfig(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ nominal\_distance\_mi=15.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ cruise\_speed\_mph=25.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ safety\_energy\_fraction=0.10,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a40ced7de3cab48d58c93553d3800be3b}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!num\_runs\_var@{num\_runs\_var}}
+\index{num\_runs\_var@{num\_runs\_var}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{num\_runs\_var}{num\_runs\_var}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a40ced7de3cab48d58c93553d3800be3b} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+num\+\_\+runs\+\_\+var = tk.\+String\+Var(value="{}500"{})}
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a79648fad4edaaa0ea564c33376edd2c0}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!plot\_container@{plot\_container}}
+\index{plot\_container@{plot\_container}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{plot\_container}{plot\_container}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a79648fad4edaaa0ea564c33376edd2c0} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+plot\+\_\+container = plot\+\_\+frame}
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a11b3b7dc935da5864fd378880fae1ec9}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!root@{root}}
+\index{root@{root}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a11b3b7dc935da5864fd378880fae1ec9} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+root = root}
+
+\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a3822324ef896924528e62127cf1516ae}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!summary\_text@{summary\_text}}
+\index{summary\_text@{summary\_text}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
+\doxysubsubsection{\texorpdfstring{summary\_text}{summary\_text}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a3822324ef896924528e62127cf1516ae} 
+battery\+V2.\+Monte\+Carlo\+GUI.\+summary\+\_\+text = tk.\+Text(summary\+\_\+inner, height=20, wrap="{}word"{})}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{battery_v2_8py}{battery\+V2.\+py}}\end{DoxyCompactItemize}

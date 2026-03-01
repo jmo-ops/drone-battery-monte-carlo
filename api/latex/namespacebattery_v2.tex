@@ -1,0 +1,275 @@
+\doxysection{battery\+V2 Namespace Reference}
+\hypertarget{namespacebattery_v2}{}\label{namespacebattery_v2}\index{batteryV2@{batteryV2}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}}
+\item 
+class \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}
+\item 
+class \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i}{Monte\+Carlo\+GUI}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{namespacebattery_v2_af248bd08982771567965a793c77a9ab3}{sample\+\_\+random\+\_\+inputs}} ()
+\item 
+\doxymbox{\hyperlink{namespacebattery_v2_a12a82ab0f3070f3f3081ff6589fd929b}{sample\+\_\+extreme\+\_\+inputs}} ()
+\item 
+float \doxymbox{\hyperlink{namespacebattery_v2_affe6e1176611f2db495c2495e6bdd6ec}{effective\+\_\+capacity\+\_\+wh}} (\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}} battery, float temp\+\_\+f)
+\item 
+\doxymbox{\hyperlink{namespacebattery_v2_aecfb42e205fe14aa239afe1e5f5981cb}{simulate\+\_\+mission}} (\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}} battery, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission, rng\+\_\+inputs=None)
+\item 
+\doxymbox{\hyperlink{namespacebattery_v2_ab0f783128b1bd9d942d65f8da46a1da8}{process\+\_\+generator}} (int num\+\_\+runs, batteries, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission)
+\item 
+\doxymbox{\hyperlink{namespacebattery_v2_a5fad548f1d812962fab2729d76b85e38}{process\+\_\+generator\+\_\+extreme}} (int num\+\_\+runs, batteries, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission)
+\item 
+\doxymbox{\hyperlink{namespacebattery_v2_a6767ab4344f7effdf944b81bcc495ead}{run\+\_\+monte\+\_\+carlo}} (int num\+\_\+runs, batteries, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission)
+\item 
+\doxymbox{\hyperlink{namespacebattery_v2_a0d381538536ff5ceaa0cb593457e986f}{run\+\_\+monte\+\_\+carlo\+\_\+extreme}} (int num\+\_\+runs, batteries, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission)
+\item 
+\doxymbox{\hyperlink{namespacebattery_v2_a0af7214a83432d16096b4812474093be}{summarize\+\_\+results}} (records, \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}} battery\+\_\+config, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission\+\_\+config)
+\item 
+\doxymbox{\hyperlink{namespacebattery_v2_ac295a887f44787458bbce044c155efd6}{generate\+\_\+docs}} ()
+\begin{DoxyCompactList}\small\item\em Executes the Doxygen command to refresh documentation. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{namespacebattery_v2_a715155bd28d0a42bff647cd9b38fb7c9}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main entry point for the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{namespacebattery_v2_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacebattery_v2_affe6e1176611f2db495c2495e6bdd6ec}\index{batteryV2@{batteryV2}!effective\_capacity\_wh@{effective\_capacity\_wh}}
+\index{effective\_capacity\_wh@{effective\_capacity\_wh}!batteryV2@{batteryV2}}
+\doxysubsubsection{\texorpdfstring{effective\_capacity\_wh()}{effective\_capacity\_wh()}}
+{\footnotesize\ttfamily \label{namespacebattery_v2_affe6e1176611f2db495c2495e6bdd6ec} 
+ float battery\+V2.\+effective\+\_\+capacity\+\_\+wh (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}}}]{battery}{, }\item[{float}]{temp\+\_\+f}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Compute effective capacity (Wh) as a function of temperature.
+
+Effective capacity decreases below 70°F (linear), clamped to max 50% loss.
+
+@param battery Battery configuration
+@param temp_f Temperature in °F
+@return Effective capacity in Wh
+\end{DoxyVerb}
+ \Hypertarget{namespacebattery_v2_ac295a887f44787458bbce044c155efd6}\index{batteryV2@{batteryV2}!generate\_docs@{generate\_docs}}
+\index{generate\_docs@{generate\_docs}!batteryV2@{batteryV2}}
+\doxysubsubsection{\texorpdfstring{generate\_docs()}{generate\_docs()}}
+{\footnotesize\ttfamily \label{namespacebattery_v2_ac295a887f44787458bbce044c155efd6} 
+battery\+V2.\+generate\+\_\+docs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Executes the Doxygen command to refresh documentation. 
+
+\Hypertarget{namespacebattery_v2_a715155bd28d0a42bff647cd9b38fb7c9}\index{batteryV2@{batteryV2}!main@{main}}
+\index{main@{main}!batteryV2@{batteryV2}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacebattery_v2_a715155bd28d0a42bff647cd9b38fb7c9} 
+battery\+V2.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Main entry point for the application. 
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{namespacebattery_v2_a715155bd28d0a42bff647cd9b38fb7c9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacebattery_v2_ab0f783128b1bd9d942d65f8da46a1da8}\index{batteryV2@{batteryV2}!process\_generator@{process\_generator}}
+\index{process\_generator@{process\_generator}!batteryV2@{batteryV2}}
+\doxysubsubsection{\texorpdfstring{process\_generator()}{process\_generator()}}
+{\footnotesize\ttfamily \label{namespacebattery_v2_ab0f783128b1bd9d942d65f8da46a1da8} 
+battery\+V2.\+process\+\_\+generator (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+runs}{, }\item[{}]{batteries}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}}]{mission}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    @brief Generator that yields one simulation record at a time (nominal inputs).
+
+    Runs @p num_runs Monte Carlo iterations. In each iteration, it evaluates every
+    battery in @p batteries using the nominal mission inputs (no extreme-biased sampling).
+
+    @param num_runs Number of Monte Carlo iterations to execute.
+    @param batteries Iterable of BatteryConfig-like objects used by simulate_mission().
+                    Each item should represent one candidate battery option.
+    @param mission Mission configuration (payload, wind, temperature, etc.).
+
+    @yields dict One simulation record per (run, battery). The record is whatever
+                simulate_mission() returns (commonly includes battery label/name,
+                success flag, remaining energy/percent, etc.).
+\end{DoxyVerb}
+ Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebattery_v2_ab0f783128b1bd9d942d65f8da46a1da8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacebattery_v2_a5fad548f1d812962fab2729d76b85e38}\index{batteryV2@{batteryV2}!process\_generator\_extreme@{process\_generator\_extreme}}
+\index{process\_generator\_extreme@{process\_generator\_extreme}!batteryV2@{batteryV2}}
+\doxysubsubsection{\texorpdfstring{process\_generator\_extreme()}{process\_generator\_extreme()}}
+{\footnotesize\ttfamily \label{namespacebattery_v2_a5fad548f1d812962fab2729d76b85e38} 
+battery\+V2.\+process\+\_\+generator\+\_\+extreme (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+runs}{, }\item[{}]{batteries}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}}]{mission}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Generator that yields one simulation record at a time (extreme-biased inputs).
+
+Runs @p num_runs Monte Carlo iterations. In each iteration, it evaluates every
+battery in @p batteries using mission inputs sampled from @ref sample_extreme_inputs
+to bias conditions toward "extreme" scenarios.
+
+@param num_runs Number of Monte Carlo iterations to execute.
+@param batteries Iterable of BatteryConfig-like objects used by simulate_mission().
+                 Each item should represent one candidate battery option.
+@param mission Mission configuration (payload, wind, temperature, etc.).
+
+@yields dict One simulation record per (run, battery). The record is whatever
+             simulate_mission() returns.
+
+@see sample_extreme_inputs
+@see simulate_mission
+\end{DoxyVerb}
+ Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebattery_v2_a5fad548f1d812962fab2729d76b85e38_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacebattery_v2_a6767ab4344f7effdf944b81bcc495ead}\index{batteryV2@{batteryV2}!run\_monte\_carlo@{run\_monte\_carlo}}
+\index{run\_monte\_carlo@{run\_monte\_carlo}!batteryV2@{batteryV2}}
+\doxysubsubsection{\texorpdfstring{run\_monte\_carlo()}{run\_monte\_carlo()}}
+{\footnotesize\ttfamily \label{namespacebattery_v2_a6767ab4344f7effdf944b81bcc495ead} 
+battery\+V2.\+run\+\_\+monte\+\_\+carlo (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+runs}{, }\item[{}]{batteries}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}}]{mission}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Run nominal Monte Carlo and collect results per battery label.
+
+@param num_runs Number of Monte Carlo runs to generate.
+@param batteries Iterable of battery objects (must have .label).
+@param mission Mission configuration parameters.
+@return Dict mapping battery label -> list of per-run records (dicts).
+\end{DoxyVerb}
+ Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebattery_v2_a6767ab4344f7effdf944b81bcc495ead_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacebattery_v2_a0d381538536ff5ceaa0cb593457e986f}\index{batteryV2@{batteryV2}!run\_monte\_carlo\_extreme@{run\_monte\_carlo\_extreme}}
+\index{run\_monte\_carlo\_extreme@{run\_monte\_carlo\_extreme}!batteryV2@{batteryV2}}
+\doxysubsubsection{\texorpdfstring{run\_monte\_carlo\_extreme()}{run\_monte\_carlo\_extreme()}}
+{\footnotesize\ttfamily \label{namespacebattery_v2_a0d381538536ff5ceaa0cb593457e986f} 
+battery\+V2.\+run\+\_\+monte\+\_\+carlo\+\_\+extreme (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+runs}{, }\item[{}]{batteries}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}}]{mission}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Run EXTREME Monte Carlo and collect results per battery label.
+
+@param num_runs Number of Monte Carlo runs to generate.
+@param batteries Iterable of battery objects (must have .label).
+@param mission Mission configuration parameters.
+@return Dict mapping battery label -> list of per-run records (dicts).
+\end{DoxyVerb}
+ Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebattery_v2_a0d381538536ff5ceaa0cb593457e986f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacebattery_v2_a12a82ab0f3070f3f3081ff6589fd929b}\index{batteryV2@{batteryV2}!sample\_extreme\_inputs@{sample\_extreme\_inputs}}
+\index{sample\_extreme\_inputs@{sample\_extreme\_inputs}!batteryV2@{batteryV2}}
+\doxysubsubsection{\texorpdfstring{sample\_extreme\_inputs()}{sample\_extreme\_inputs()}}
+{\footnotesize\ttfamily \label{namespacebattery_v2_a12a82ab0f3070f3f3081ff6589fd929b} 
+battery\+V2.\+sample\+\_\+extreme\+\_\+inputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Sample one set of extreme / worst-case-biased inputs.
+
+Uses triangular distributions biased toward harsher conditions:
+  - wind: 10–20 mph, skewed high
+  - temperature: 10–95 °F, skewed low (cold-biased)
+  - payload: 2.5–5 lb, skewed high
+  - distance_factor: 1.0–1.1, skewed high
+
+@return (wind_mph, temp_f, payload_lb, distance_factor)
+\end{DoxyVerb}
+ \Hypertarget{namespacebattery_v2_af248bd08982771567965a793c77a9ab3}\index{batteryV2@{batteryV2}!sample\_random\_inputs@{sample\_random\_inputs}}
+\index{sample\_random\_inputs@{sample\_random\_inputs}!batteryV2@{batteryV2}}
+\doxysubsubsection{\texorpdfstring{sample\_random\_inputs()}{sample\_random\_inputs()}}
+{\footnotesize\ttfamily \label{namespacebattery_v2_af248bd08982771567965a793c77a9ab3} 
+battery\+V2.\+sample\+\_\+random\+\_\+inputs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Sample one set of nominal environmental/mission inputs.
+
+Nominal sampling uses uniform distributions:
+- wind: 0–15 mph
+- temperature: 32–95 °F
+- payload: 0–5 lb
+- distance_factor: 0.90–1.10
+
+@return (wind_mph, temp_f, payload_lb, distance_factor)
+\end{DoxyVerb}
+ \Hypertarget{namespacebattery_v2_aecfb42e205fe14aa239afe1e5f5981cb}\index{batteryV2@{batteryV2}!simulate\_mission@{simulate\_mission}}
+\index{simulate\_mission@{simulate\_mission}!batteryV2@{batteryV2}}
+\doxysubsubsection{\texorpdfstring{simulate\_mission()}{simulate\_mission()}}
+{\footnotesize\ttfamily \label{namespacebattery_v2_aecfb42e205fe14aa239afe1e5f5981cb} 
+battery\+V2.\+simulate\+\_\+mission (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}}}]{battery}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}}]{mission}{, }\item[{}]{rng\+\_\+inputs}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Simulate one mission trial for a given battery under sampled conditions.
+
+Steps:
+  1) sample inputs (wind/temp/payload/distance_factor) unless provided
+  2) compute distance_mi = mission.nominal_distance_mi * distance_factor
+  3) compute power draw (W) = base + payload penalty + wind penalty
+  4) apply cold power penalty if temp < 70°F
+  5) compute time = distance / cruise_speed
+  6) compute energy_required = power * time
+  7) compute effective capacity (cold reduced) and reserve requirement
+  8) success if energy_required <= capacity_after_reserve
+
+@param battery Battery configuration
+@param mission Mission configuration
+@param rng_inputs Optional tuple (wind_mph, temp_f, payload_lb, distance_factor)
+@return dict containing inputs and outputs (distance, remaining energy, success, etc.)
+\end{DoxyVerb}
+ Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{namespacebattery_v2_aecfb42e205fe14aa239afe1e5f5981cb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacebattery_v2_a0af7214a83432d16096b4812474093be}\index{batteryV2@{batteryV2}!summarize\_results@{summarize\_results}}
+\index{summarize\_results@{summarize\_results}!batteryV2@{batteryV2}}
+\doxysubsubsection{\texorpdfstring{summarize\_results()}{summarize\_results()}}
+{\footnotesize\ttfamily \label{namespacebattery_v2_a0af7214a83432d16096b4812474093be} 
+battery\+V2.\+summarize\+\_\+results (\begin{DoxyParamCaption}\item[{}]{records}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}}}]{battery\+\_\+config}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}}]{mission\+\_\+config}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}@brief Compute summary distribution statistics for one battery’s records.
+
+@param records Per-run result records for a single battery label.
+@param battery_config Battery settings for the battery being summarized.
+@param mission_config Mission settings for the runs being summarized.
+@return dict Summary fields:
+        - mean_remaining_pct: float
+        - p5_remaining_pct: float
+        - p95_remaining_pct: float
+        - success_rate: float
+        - avg_energy_used_wh: float
+        - avg_flight_time_s: float
+        - est_deliveries: float
+\end{DoxyVerb}
+ Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{namespacebattery_v2_a0af7214a83432d16096b4812474093be_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,129 @@
+\doxysection{battery\+V2.\+Battery\+Config Class Reference}
+\hypertarget{classbattery_v2_1_1_battery_config}{}\label{classbattery_v2_1_1_battery_config}\index{batteryV2.BatteryConfig@{batteryV2.BatteryConfig}}
+
+
+Collaboration diagram for battery\+V2.\+Battery\+Config:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classbattery_v2_1_1_battery_config__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_a01bd6c0552bae56729b044ed2ce12861}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_a1b950488cf33e69d5962590ce2feaef0}{key}}, str \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_ad76a7d980f080291179fdb583e37afc5}{label}}, float \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_a15d6c62bef7154d880b1971af19555be}{capacity\+\_\+wh}}, float \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_a3a7f640e88e17f8f8452d2dc0bb8e7d7}{base\+\_\+power\+\_\+w}}, float \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_af6be93dd8b6fc7b7103aa1cd8247049b}{payload\+\_\+penalty\+\_\+w\+\_\+per\+\_\+lb}}, float \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_a16753a439063625885b36547fd8865e1}{wind\+\_\+penalty\+\_\+w\+\_\+per\+\_\+mph}}, float \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_a6d23bef43c87e0db5691a0a92432ec60}{cold\+\_\+capacity\+\_\+penalty\+\_\+per\+\_\+deg}}, float \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_ab66a1bedb2a7f8a4bdc401b5b2578b39}{cold\+\_\+power\+\_\+penalty\+\_\+per\+\_\+deg}}=0.\+0)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_a1b950488cf33e69d5962590ce2feaef0}{key}} = key
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_ad76a7d980f080291179fdb583e37afc5}{label}} = label
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_a15d6c62bef7154d880b1971af19555be}{capacity\+\_\+wh}} = capacity\+\_\+wh
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_a3a7f640e88e17f8f8452d2dc0bb8e7d7}{base\+\_\+power\+\_\+w}} = base\+\_\+power\+\_\+w
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_af6be93dd8b6fc7b7103aa1cd8247049b}{payload\+\_\+penalty\+\_\+w\+\_\+per\+\_\+lb}} = payload\+\_\+penalty\+\_\+w\+\_\+per\+\_\+lb
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_a16753a439063625885b36547fd8865e1}{wind\+\_\+penalty\+\_\+w\+\_\+per\+\_\+mph}} = wind\+\_\+penalty\+\_\+w\+\_\+per\+\_\+mph
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_a6d23bef43c87e0db5691a0a92432ec60}{cold\+\_\+capacity\+\_\+penalty\+\_\+per\+\_\+deg}} = cold\+\_\+capacity\+\_\+penalty\+\_\+per\+\_\+deg
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config_ab66a1bedb2a7f8a4bdc401b5b2578b39}{cold\+\_\+power\+\_\+penalty\+\_\+per\+\_\+deg}} = cold\+\_\+power\+\_\+penalty\+\_\+per\+\_\+deg
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Battery configuration.
+
+@var capacity_wh Nominal energy capacity (Wh)
+@var base_power_w Baseline power draw (W)
+@var payload_penalty_w_per_lb Added watts per lb payload
+@var wind_penalty_w_per_mph Added watts per mph headwind
+@var cold_capacity_penalty_per_deg Capacity loss fraction per °F below 70
+@var cold_power_penalty_per_deg Power increase fraction per °F below 70
+\end{DoxyVerb}
+ 
+
+\label{doc-constructors}
+\Hypertarget{classbattery_v2_1_1_battery_config_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbattery_v2_1_1_battery_config_a01bd6c0552bae56729b044ed2ce12861}\index{batteryV2.BatteryConfig@{batteryV2.BatteryConfig}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!batteryV2.BatteryConfig@{batteryV2.BatteryConfig}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_battery_config_a01bd6c0552bae56729b044ed2ce12861} 
+battery\+V2.\+Battery\+Config.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{str}]{key}{, }\item[{str}]{label}{, }\item[{float}]{capacity\+\_\+wh}{, }\item[{float}]{base\+\_\+power\+\_\+w}{, }\item[{float}]{payload\+\_\+penalty\+\_\+w\+\_\+per\+\_\+lb}{, }\item[{float}]{wind\+\_\+penalty\+\_\+w\+\_\+per\+\_\+mph}{, }\item[{float}]{cold\+\_\+capacity\+\_\+penalty\+\_\+per\+\_\+deg}{, }\item[{float }]{cold\+\_\+power\+\_\+penalty\+\_\+per\+\_\+deg}{ = {\ttfamily 0.0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create a battery configuration.
+
+Args:
+key: Short ID used internally.
+label: Display name for plots/GUI.
+capacity_wh: Nominal energy capacity (Wh).
+base_power_w: Baseline cruise power draw (W).
+payload_penalty_w_per_lb: Added power per lb payload (W/lb).
+wind_penalty_w_per_mph: Added power per mph headwind (W/mph).
+cold_capacity_penalty_per_deg: Fractional capacity loss per deg below nominal.
+cold_power_penalty_per_deg: Extra power per deg below nominal.
+\end{DoxyVerb}
+ 
+
+\label{doc-variable-members}
+\Hypertarget{classbattery_v2_1_1_battery_config_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classbattery_v2_1_1_battery_config_a3a7f640e88e17f8f8452d2dc0bb8e7d7}\index{batteryV2.BatteryConfig@{batteryV2.BatteryConfig}!base\_power\_w@{base\_power\_w}}
+\index{base\_power\_w@{base\_power\_w}!batteryV2.BatteryConfig@{batteryV2.BatteryConfig}}
+\doxysubsubsection{\texorpdfstring{base\_power\_w}{base\_power\_w}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_battery_config_a3a7f640e88e17f8f8452d2dc0bb8e7d7} 
+battery\+V2.\+Battery\+Config.\+base\+\_\+power\+\_\+w = base\+\_\+power\+\_\+w}
+
+\Hypertarget{classbattery_v2_1_1_battery_config_a15d6c62bef7154d880b1971af19555be}\index{batteryV2.BatteryConfig@{batteryV2.BatteryConfig}!capacity\_wh@{capacity\_wh}}
+\index{capacity\_wh@{capacity\_wh}!batteryV2.BatteryConfig@{batteryV2.BatteryConfig}}
+\doxysubsubsection{\texorpdfstring{capacity\_wh}{capacity\_wh}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_battery_config_a15d6c62bef7154d880b1971af19555be} 
+battery\+V2.\+Battery\+Config.\+capacity\+\_\+wh = capacity\+\_\+wh}
+
+\Hypertarget{classbattery_v2_1_1_battery_config_a6d23bef43c87e0db5691a0a92432ec60}\index{batteryV2.BatteryConfig@{batteryV2.BatteryConfig}!cold\_capacity\_penalty\_per\_deg@{cold\_capacity\_penalty\_per\_deg}}
+\index{cold\_capacity\_penalty\_per\_deg@{cold\_capacity\_penalty\_per\_deg}!batteryV2.BatteryConfig@{batteryV2.BatteryConfig}}
+\doxysubsubsection{\texorpdfstring{cold\_capacity\_penalty\_per\_deg}{cold\_capacity\_penalty\_per\_deg}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_battery_config_a6d23bef43c87e0db5691a0a92432ec60} 
+battery\+V2.\+Battery\+Config.\+cold\+\_\+capacity\+\_\+penalty\+\_\+per\+\_\+deg = cold\+\_\+capacity\+\_\+penalty\+\_\+per\+\_\+deg}
+
+\Hypertarget{classbattery_v2_1_1_battery_config_ab66a1bedb2a7f8a4bdc401b5b2578b39}\index{batteryV2.BatteryConfig@{batteryV2.BatteryConfig}!cold\_power\_penalty\_per\_deg@{cold\_power\_penalty\_per\_deg}}
+\index{cold\_power\_penalty\_per\_deg@{cold\_power\_penalty\_per\_deg}!batteryV2.BatteryConfig@{batteryV2.BatteryConfig}}
+\doxysubsubsection{\texorpdfstring{cold\_power\_penalty\_per\_deg}{cold\_power\_penalty\_per\_deg}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_battery_config_ab66a1bedb2a7f8a4bdc401b5b2578b39} 
+battery\+V2.\+Battery\+Config.\+cold\+\_\+power\+\_\+penalty\+\_\+per\+\_\+deg = cold\+\_\+power\+\_\+penalty\+\_\+per\+\_\+deg}
+
+\Hypertarget{classbattery_v2_1_1_battery_config_a1b950488cf33e69d5962590ce2feaef0}\index{batteryV2.BatteryConfig@{batteryV2.BatteryConfig}!key@{key}}
+\index{key@{key}!batteryV2.BatteryConfig@{batteryV2.BatteryConfig}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_battery_config_a1b950488cf33e69d5962590ce2feaef0} 
+battery\+V2.\+Battery\+Config.\+key = key}
+
+\Hypertarget{classbattery_v2_1_1_battery_config_ad76a7d980f080291179fdb583e37afc5}\index{batteryV2.BatteryConfig@{batteryV2.BatteryConfig}!label@{label}}
+\index{label@{label}!batteryV2.BatteryConfig@{batteryV2.BatteryConfig}}
+\doxysubsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_battery_config_ad76a7d980f080291179fdb583e37afc5} 
+battery\+V2.\+Battery\+Config.\+label = label}
+
+\Hypertarget{classbattery_v2_1_1_battery_config_af6be93dd8b6fc7b7103aa1cd8247049b}\index{batteryV2.BatteryConfig@{batteryV2.BatteryConfig}!payload\_penalty\_w\_per\_lb@{payload\_penalty\_w\_per\_lb}}
+\index{payload\_penalty\_w\_per\_lb@{payload\_penalty\_w\_per\_lb}!batteryV2.BatteryConfig@{batteryV2.BatteryConfig}}
+\doxysubsubsection{\texorpdfstring{payload\_penalty\_w\_per\_lb}{payload\_penalty\_w\_per\_lb}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_battery_config_af6be93dd8b6fc7b7103aa1cd8247049b} 
+battery\+V2.\+Battery\+Config.\+payload\+\_\+penalty\+\_\+w\+\_\+per\+\_\+lb = payload\+\_\+penalty\+\_\+w\+\_\+per\+\_\+lb}
+
+\Hypertarget{classbattery_v2_1_1_battery_config_a16753a439063625885b36547fd8865e1}\index{batteryV2.BatteryConfig@{batteryV2.BatteryConfig}!wind\_penalty\_w\_per\_mph@{wind\_penalty\_w\_per\_mph}}
+\index{wind\_penalty\_w\_per\_mph@{wind\_penalty\_w\_per\_mph}!batteryV2.BatteryConfig@{batteryV2.BatteryConfig}}
+\doxysubsubsection{\texorpdfstring{wind\_penalty\_w\_per\_mph}{wind\_penalty\_w\_per\_mph}}
+{\footnotesize\ttfamily \label{classbattery_v2_1_1_battery_config_a16753a439063625885b36547fd8865e1} 
+battery\+V2.\+Battery\+Config.\+wind\+\_\+penalty\+\_\+w\+\_\+per\+\_\+mph = wind\+\_\+penalty\+\_\+w\+\_\+per\+\_\+mph}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{battery_v2_8py}{battery\+V2.\+py}}\end{DoxyCompactItemize}
