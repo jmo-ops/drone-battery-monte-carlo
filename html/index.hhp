@@ -1,5 +1,5 @@
 [OPTIONS]
-Compiled file=index.chm
+Compiled file=YES
 Compatibility=1.1
 Full-text search=Yes
 Contents file=index.hhc
@@ -7,6 +7,7 @@ Default Window=main
 Default topic=index.html
 Index file=index.hhk
 Language=0x409 English (United States)
+Create CHI file=YES
 Title=Drone Battery Monte Carlo
 
 [WINDOWS]

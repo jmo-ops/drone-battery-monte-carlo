@@ -174,7 +174,20 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">@brief Yield one simulation record at a time (nominal inputs).</pre> <div class="dynheader">
+<pre class="fragment">    @brief Generator that yields one simulation record at a time (nominal inputs).
+
+    Runs @p num_runs Monte Carlo iterations. In each iteration, it evaluates every
+    battery in @p batteries using the nominal mission inputs (no extreme-biased sampling).
+
+    @param num_runs Number of Monte Carlo iterations to execute.
+    @param batteries Iterable of BatteryConfig-like objects used by simulate_mission().
+                    Each item should represent one candidate battery option.
+    @param mission Mission configuration (payload, wind, temperature, etc.).
+
+    @yields dict One simulation record per (run, battery). The record is whatever
+                simulate_mission() returns (commonly includes battery label/name,
+                success flag, remaining energy/percent, etc.).
+</pre> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacebattery_v2_ab0f783128b1bd9d942d65f8da46a1da8_cgraph.svg" width="599" height="120"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
@@ -205,7 +218,23 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">@brief Yield one simulation record at a time (extreme-biased inputs).</pre> <div class="dynheader">
+<pre class="fragment">@brief Generator that yields one simulation record at a time (extreme-biased inputs).
+
+Runs @p num_runs Monte Carlo iterations. In each iteration, it evaluates every
+battery in @p batteries using mission inputs sampled from @ref sample_extreme_inputs
+to bias conditions toward "extreme" scenarios.
+
+@param num_runs Number of Monte Carlo iterations to execute.
+@param batteries Iterable of BatteryConfig-like objects used by simulate_mission().
+                 Each item should represent one candidate battery option.
+@param mission Mission configuration (payload, wind, temperature, etc.).
+
+@yields dict One simulation record per (run, battery). The record is whatever
+             simulate_mission() returns.
+
+@see sample_extreme_inputs
+@see simulate_mission
+</pre> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacebattery_v2_a5fad548f1d812962fab2729d76b85e38_cgraph.svg" width="646" height="154"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
