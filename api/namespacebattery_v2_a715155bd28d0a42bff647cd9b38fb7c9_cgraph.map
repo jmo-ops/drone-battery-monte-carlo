@@ -1,0 +1,6 @@
+<map id="batteryV2.main" name="batteryV2.main">
+<area shape="rect" id="Node000001" title="Main entry point for the application." alt="" coords="5,29,115,56"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="28,30,23,21,26,11,39,5,60,3,82,5,94,12,92,16,81,10,60,8,41,10,30,15,28,20,33,27"/>
+<area shape="rect" id="Node000002" href="$namespacebattery_v2.html#ac295a887f44787458bbce044c155efd6" title="Executes the Doxygen command to refresh documentation." alt="" coords="163,29,329,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,40,147,40,147,45,115,45"/>
+</map>
