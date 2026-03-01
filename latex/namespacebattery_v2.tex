@@ -114,7 +114,13 @@ battery\+V2.\+process\+\_\+generator\+\_\+extreme (\begin{DoxyParamCaption}\item
 {\footnotesize\ttfamily \label{namespacebattery_v2_a6767ab4344f7effdf944b81bcc495ead} 
 battery\+V2.\+run\+\_\+monte\+\_\+carlo (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+runs}{, }\item[{}]{batteries}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}}]{mission}{}\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}@brief Run nominal Monte Carlo and collect results per battery label.\end{DoxyVerb}
+\begin{DoxyVerb}@brief Run nominal Monte Carlo and collect results per battery label.
+
+@param num_runs Number of Monte Carlo runs to generate.
+@param batteries Iterable of battery objects (must have .label).
+@param mission Mission configuration parameters.
+@return Dict mapping battery label -> list of per-run records (dicts).
+\end{DoxyVerb}
  Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -128,7 +134,13 @@ battery\+V2.\+run\+\_\+monte\+\_\+carlo (\begin{DoxyParamCaption}\item[{int}]{nu
 {\footnotesize\ttfamily \label{namespacebattery_v2_a0d381538536ff5ceaa0cb593457e986f} 
 battery\+V2.\+run\+\_\+monte\+\_\+carlo\+\_\+extreme (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+runs}{, }\item[{}]{batteries}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}}]{mission}{}\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}@brief Run extreme-biased Monte Carlo and collect results per battery label.\end{DoxyVerb}
+\begin{DoxyVerb}@brief Run EXTREME Monte Carlo and collect results per battery label.
+
+@param num_runs Number of Monte Carlo runs to generate.
+@param batteries Iterable of battery objects (must have .label).
+@param mission Mission configuration parameters.
+@return Dict mapping battery label -> list of per-run records (dicts).
+\end{DoxyVerb}
  Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -206,7 +218,17 @@ battery\+V2.\+summarize\+\_\+results (\begin{DoxyParamCaption}\item[{}]{records}
 
 \begin{DoxyVerb}@brief Compute summary distribution statistics for one battery’s records.
 
-@return dict with mean/p5/p95 remaining %, success rate, averages, and deliveries estimate.
+@param records Per-run result records for a single battery label.
+@param battery_config Battery settings for the battery being summarized.
+@param mission_config Mission settings for the runs being summarized.
+@return dict Summary fields:
+        - mean_remaining_pct: float
+        - p5_remaining_pct: float
+        - p95_remaining_pct: float
+        - success_rate: float
+        - avg_energy_used_wh: float
+        - avg_flight_time_s: float
+        - est_deliveries: float
 \end{DoxyVerb}
  Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]

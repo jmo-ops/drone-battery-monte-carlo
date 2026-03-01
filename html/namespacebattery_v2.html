@@ -236,7 +236,13 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">@brief Run nominal Monte Carlo and collect results per battery label.</pre> <div class="dynheader">
+<pre class="fragment">@brief Run nominal Monte Carlo and collect results per battery label.
+
+@param num_runs Number of Monte Carlo runs to generate.
+@param batteries Iterable of battery objects (must have .label).
+@param mission Mission configuration parameters.
+@return Dict mapping battery label -&gt; list of per-run records (dicts).
+</pre> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacebattery_v2_a6767ab4344f7effdf944b81bcc495ead_cgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
@@ -267,7 +273,13 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">@brief Run extreme-biased Monte Carlo and collect results per battery label.</pre> <div class="dynheader">
+<pre class="fragment">@brief Run EXTREME Monte Carlo and collect results per battery label.
+
+@param num_runs Number of Monte Carlo runs to generate.
+@param batteries Iterable of battery objects (must have .label).
+@param mission Mission configuration parameters.
+@return Dict mapping battery label -&gt; list of per-run records (dicts).
+</pre> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="namespacebattery_v2_a0d381538536ff5ceaa0cb593457e986f_cgraph.svg" width="100%" height="415"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
@@ -399,7 +411,17 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <pre class="fragment">@brief Compute summary distribution statistics for one battery’s records.
 
-@return dict with mean/p5/p95 remaining %, success rate, averages, and deliveries estimate.
+@param records Per-run result records for a single battery label.
+@param battery_config Battery settings for the battery being summarized.
+@param mission_config Mission settings for the runs being summarized.
+@return dict Summary fields:
+        - mean_remaining_pct: float
+        - p5_remaining_pct: float
+        - p95_remaining_pct: float
+        - success_rate: float
+        - avg_energy_used_wh: float
+        - avg_flight_time_s: float
+        - est_deliveries: float
 </pre> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
