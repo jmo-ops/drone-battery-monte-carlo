@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Constructs the &quot;Extreme Conditions&quot; dashboard.">
+<g id="a_Node000001"><a xlink:title=" ">
 <polygon fill="#999999" stroke="#666666" points="145.75,-80 0,-80 0,-48 145.75,-48 145.75,-80"/>
 <text text-anchor="start" x="8" y="-66.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.MonteCarloGUI.run</text>
 <text text-anchor="middle" x="72.88" y="-54.5" font-family="Helvetica,sans-Serif" font-size="10.00">_extreme_simulation</text>
@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classbattery_v2_1_1_monte_carlo_g_u_i.html#a51e7e587954e3cceaea5ff17ad8aa75d" target="_top" xlink:title="Refreshes the histogram for extreme simulation results.">
+<g id="a_Node000002"><a xlink:href="classbattery_v2_1_1_monte_carlo_g_u_i.html#a51e7e587954e3cceaea5ff17ad8aa75d" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="317,-130 181.75,-130 181.75,-98 317,-98 317,-130"/>
 <text text-anchor="start" x="189.75" y="-116.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.MonteCarloGUI.</text>
 <text text-anchor="middle" x="249.38" y="-104.5" font-family="Helvetica,sans-Serif" font-size="10.00">_plot_extreme_distributions</text>

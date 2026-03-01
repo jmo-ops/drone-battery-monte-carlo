@@ -13,7 +13,7 @@ Collaboration diagram for battery\+V2.\+Mission\+Config:\+\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config_a76c5beb1cec730b934f72b9c4b3406eb}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, float \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config_a52f42fc3b8a57776cf221f54000a23f8}{nominal\+\_\+distance\+\_\+mi}}=15.\+0, float \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config_a6c1870e531f7dc8a548ff434820a2ab1}{cruise\+\_\+speed\+\_\+mph}}=25.\+0, float \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config_a4671569ebc43648aa8346998bf3fc733}{safety\+\_\+energy\+\_\+fraction}}=0.\+10)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Create a mission configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,6 +46,19 @@ The actual mission distance per trial is:
 {\footnotesize\ttfamily \label{classbattery_v2_1_1_mission_config_a76c5beb1cec730b934f72b9c4b3406eb} 
 battery\+V2.\+Mission\+Config.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{float }]{nominal\+\_\+distance\+\_\+mi}{ = {\ttfamily 15.0}, }\item[{float }]{cruise\+\_\+speed\+\_\+mph}{ = {\ttfamily 25.0}, }\item[{float }]{safety\+\_\+energy\+\_\+fraction}{ = {\ttfamily 0.10}}\end{DoxyParamCaption})}
 
+
+
+Create a mission configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{classbattery_v2_1_1_mission_config_a52f42fc3b8a57776cf221f54000a23f8}{nominal\+\_\+distance\+\_\+mi}} & Baseline mission distance in miles. \\
+\hline
+{\em \doxylink{classbattery_v2_1_1_mission_config_a6c1870e531f7dc8a548ff434820a2ab1}{cruise\+\_\+speed\+\_\+mph}} & Cruise speed (mph), assumed constant. \\
+\hline
+{\em \doxylink{classbattery_v2_1_1_mission_config_a4671569ebc43648aa8346998bf3fc733}{safety\+\_\+energy\+\_\+fraction}} & Fraction of capacity reserved as safety margin (0–1). \\
+\hline
+\end{DoxyParams}
 
 
 \label{doc-variable-members}

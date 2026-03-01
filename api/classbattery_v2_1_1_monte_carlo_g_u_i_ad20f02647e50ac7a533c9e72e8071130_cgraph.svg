@@ -58,7 +58,7 @@ var sectionId = 'dynsection-3';
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Executes the standard Monte Carlo simulation.">
+<g id="a_Node000001"><a xlink:title=" ">
 <polygon fill="#999999" stroke="#666666" points="145.75,-76 0,-76 0,-44 145.75,-44 145.75,-76"/>
 <text text-anchor="start" x="8" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.MonteCarloGUI.run</text>
 <text text-anchor="middle" x="72.88" y="-50.5" font-family="Helvetica,sans-Serif" font-size="10.00">_simulation</text>
@@ -68,7 +68,7 @@ var sectionId = 'dynsection-3';
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="classbattery_v2_1_1_monte_carlo_g_u_i.html#a67f25aa73b33a439ae78ad47aebbddc6" target="_top" xlink:title="Updates the histogram display for extreme simulation results.">
+<g id="a_Node000002"><a xlink:href="classbattery_v2_1_1_monte_carlo_g_u_i.html#a67f25aa73b33a439ae78ad47aebbddc6" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="314,-126 181.75,-126 181.75,-94 314,-94 314,-126"/>
 <text text-anchor="start" x="189.75" y="-112.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.MonteCarloGUI.</text>
 <text text-anchor="middle" x="247.88" y="-100.5" font-family="Helvetica,sans-Serif" font-size="10.00">_plot_distributions</text>
@@ -114,9 +114,9 @@ var sectionId = 'dynsection-3';
 </g>
 </g>
 <!-- Node1&#45;&gt;Node8 -->
-<g id="edge7_Node000001_Node000008" class="edge">
+<g id="edge8_Node000001_Node000008" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<g id="a_edge7_Node000001_Node000008"><a xlink:title=" ">
+<g id="a_edge8_Node000001_Node000008"><a xlink:title=" ">
 <path fill="none" stroke="#63b8ff" d="M137.74,-43.56C152.14,-40.31 167.41,-37.22 181.75,-35 239.81,-26 306.54,-21.14 354.51,-18.6"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="354.66,-22.1 364.47,-18.09 354.31,-15.11 354.66,-22.1"/>
 </a>
@@ -143,10 +143,10 @@ var sectionId = 'dynsection-3';
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="namespacebattery_v2.html#aecfb42e205fe14aa239afe1e5f5981cb" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="625,-76 527.25,-76 527.25,-44 625,-44 625,-76"/>
-<text text-anchor="start" x="535.25" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.simulate</text>
-<text text-anchor="middle" x="576.12" y="-50.5" font-family="Helvetica,sans-Serif" font-size="10.00">_mission</text>
+<g id="a_Node000005"><a xlink:href="namespacebattery_v2.html#af248bd08982771567965a793c77a9ab3" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="791,-110 661,-110 661,-78 791,-78 791,-110"/>
+<text text-anchor="start" x="669" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.sample_random</text>
+<text text-anchor="middle" x="726" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">_inputs</text>
 </a>
 </g>
 </g>
@@ -154,55 +154,64 @@ var sectionId = 'dynsection-3';
 <g id="edge4_Node000004_Node000005" class="edge">
 <title>Node4&#45;&gt;Node5</title>
 <g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M491.64,-60C499.71,-60 507.89,-60 515.8,-60"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="515.65,-63.5 525.65,-60 515.65,-56.5 515.65,-63.5"/>
+<path fill="none" stroke="#63b8ff" d="M457.97,-70.38C478.19,-75.7 503.92,-81.74 527.25,-85 567.35,-90.61 612.42,-92.96 649.4,-93.87"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="649.01,-97.36 659.09,-94.07 649.16,-90.36 649.01,-97.36"/>
 </a>
 </g>
 </g>
 <!-- Node6 -->
 <g id="Node000006" class="node">
 <title>Node6</title>
-<g id="a_Node000006"><a xlink:href="namespacebattery_v2.html#affe6e1176611f2db495c2495e6bdd6ec" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="774.88,-32 677.12,-32 677.12,0 774.88,0 774.88,-32"/>
-<text text-anchor="start" x="685.12" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.effective</text>
-<text text-anchor="middle" x="726" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">_capacity_wh</text>
+<g id="a_Node000006"><a xlink:href="namespacebattery_v2.html#aecfb42e205fe14aa239afe1e5f5981cb" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="625,-76 527.25,-76 527.25,-44 625,-44 625,-76"/>
+<text text-anchor="start" x="535.25" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.simulate</text>
+<text text-anchor="middle" x="576.12" y="-50.5" font-family="Helvetica,sans-Serif" font-size="10.00">_mission</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node6 -->
-<g id="edge5_Node000005_Node000006" class="edge">
-<title>Node5&#45;&gt;Node6</title>
-<g id="a_edge5_Node000005_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M625.14,-45.71C638.18,-41.83 652.45,-37.59 666.03,-33.55"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="666.69,-37 675.27,-30.8 664.69,-30.29 666.69,-37"/>
+<!-- Node4&#45;&gt;Node6 -->
+<g id="edge5_Node000004_Node000006" class="edge">
+<title>Node4&#45;&gt;Node6</title>
+<g id="a_edge5_Node000004_Node000006"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M491.64,-60C499.71,-60 507.89,-60 515.8,-60"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="515.65,-63.5 525.65,-60 515.65,-56.5 515.65,-63.5"/>
+</a>
+</g>
+</g>
+<!-- Node6&#45;&gt;Node5 -->
+<g id="edge7_Node000006_Node000005" class="edge">
+<title>Node6&#45;&gt;Node5</title>
+<g id="a_edge7_Node000006_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M625.14,-71.04C632.9,-72.83 641.11,-74.71 649.35,-76.61"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="648.55,-80.01 659.08,-78.84 650.12,-73.19 648.55,-80.01"/>
 </a>
 </g>
 </g>
 <!-- Node7 -->
 <g id="Node000007" class="node">
 <title>Node7</title>
-<g id="a_Node000007"><a xlink:href="namespacebattery_v2.html#af248bd08982771567965a793c77a9ab3" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="791,-82 661,-82 661,-50 791,-50 791,-82"/>
-<text text-anchor="start" x="669" y="-68.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.sample_random</text>
-<text text-anchor="middle" x="726" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">_inputs</text>
+<g id="a_Node000007"><a xlink:href="namespacebattery_v2.html#affe6e1176611f2db495c2495e6bdd6ec" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="774.88,-51 677.12,-51 677.12,-19 774.88,-19 774.88,-51"/>
+<text text-anchor="start" x="685.12" y="-37.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.effective</text>
+<text text-anchor="middle" x="726" y="-25.5" font-family="Helvetica,sans-Serif" font-size="10.00">_capacity_wh</text>
 </a>
 </g>
 </g>
-<!-- Node5&#45;&gt;Node7 -->
-<g id="edge6_Node000005_Node000007" class="edge">
-<title>Node5&#45;&gt;Node7</title>
-<g id="a_edge6_Node000005_Node000007"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M625.14,-61.95C632.82,-62.26 640.92,-62.59 649.07,-62.92"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="648.91,-66.42 659.04,-63.32 649.19,-59.42 648.91,-66.42"/>
+<!-- Node6&#45;&gt;Node7 -->
+<g id="edge6_Node000006_Node000007" class="edge">
+<title>Node6&#45;&gt;Node7</title>
+<g id="a_edge6_Node000006_Node000007"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M625.14,-51.88C638.05,-49.7 652.17,-47.31 665.62,-45.04"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="665.96,-48.53 675.23,-43.41 664.79,-41.63 665.96,-48.53"/>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node6 -->
-<g id="edge8_Node000008_Node000006" class="edge">
-<title>Node8&#45;&gt;Node6</title>
-<g id="a_edge8_Node000008_Node000006"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M475.51,-16C528.92,-16 610.54,-16 665.75,-16"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="665.59,-19.5 675.59,-16 665.59,-12.5 665.59,-19.5"/>
+<!-- Node8&#45;&gt;Node7 -->
+<g id="edge9_Node000008_Node000007" class="edge">
+<title>Node8&#45;&gt;Node7</title>
+<g id="a_edge9_Node000008_Node000007"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M475.51,-19.37C528.92,-22.72 610.54,-27.83 665.75,-31.29"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="665.4,-34.77 675.6,-31.91 665.83,-27.79 665.4,-34.77"/>
 </a>
 </g>
 </g>

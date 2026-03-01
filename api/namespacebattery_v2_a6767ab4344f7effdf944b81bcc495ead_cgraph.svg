@@ -59,9 +59,9 @@ var sectionId = 'dynsection-3';
 <g id="Node000001" class="node">
 <title>Node1</title>
 <g id="a_Node000001"><a xlink:title=" ">
-<polygon fill="#999999" stroke="#666666" points="106.75,-57 0,-57 0,-25 106.75,-25 106.75,-57"/>
-<text text-anchor="start" x="8" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.run_monte</text>
-<text text-anchor="middle" x="53.38" y="-31.5" font-family="Helvetica,sans-Serif" font-size="10.00">_carlo</text>
+<polygon fill="#999999" stroke="#666666" points="106.75,-60 0,-60 0,-28 106.75,-28 106.75,-60"/>
+<text text-anchor="start" x="8" y="-46.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.run_monte</text>
+<text text-anchor="middle" x="53.38" y="-34.5" font-family="Helvetica,sans-Serif" font-size="10.00">_carlo</text>
 </a>
 </g>
 </g>
@@ -69,8 +69,8 @@ var sectionId = 'dynsection-3';
 <g id="Node000002" class="node">
 <title>Node2</title>
 <g id="a_Node000002"><a xlink:href="namespacebattery_v2.html#ab0f783128b1bd9d942d65f8da46a1da8" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="284,-51 142.75,-51 142.75,-31 284,-31 284,-51"/>
-<text text-anchor="middle" x="213.38" y="-37.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.process_generator</text>
+<polygon fill="white" stroke="#666666" points="284,-54 142.75,-54 142.75,-34 284,-34 284,-54"/>
+<text text-anchor="middle" x="213.38" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.process_generator</text>
 </a>
 </g>
 </g>
@@ -78,18 +78,18 @@ var sectionId = 'dynsection-3';
 <g id="edge1_Node000001_Node000002" class="edge">
 <title>Node1&#45;&gt;Node2</title>
 <g id="a_edge1_Node000001_Node000002"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M106.99,-41C114.67,-41 122.74,-41 130.84,-41"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="130.77,-44.5 140.77,-41 130.77,-37.5 130.77,-44.5"/>
+<path fill="none" stroke="#63b8ff" d="M106.99,-44C114.67,-44 122.74,-44 130.84,-44"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="130.77,-47.5 140.77,-44 130.77,-40.5 130.77,-47.5"/>
 </a>
 </g>
 </g>
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="namespacebattery_v2.html#aecfb42e205fe14aa239afe1e5f5981cb" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="417.75,-57 320,-57 320,-25 417.75,-25 417.75,-57"/>
-<text text-anchor="start" x="328" y="-43.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.simulate</text>
-<text text-anchor="middle" x="368.88" y="-31.5" font-family="Helvetica,sans-Serif" font-size="10.00">_mission</text>
+<g id="a_Node000003"><a xlink:href="namespacebattery_v2.html#af248bd08982771567965a793c77a9ab3" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="583.75,-82 453.75,-82 453.75,-50 583.75,-50 583.75,-82"/>
+<text text-anchor="start" x="461.75" y="-68.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.sample_random</text>
+<text text-anchor="middle" x="518.75" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">_inputs</text>
 </a>
 </g>
 </g>
@@ -97,46 +97,55 @@ var sectionId = 'dynsection-3';
 <g id="edge2_Node000002_Node000003" class="edge">
 <title>Node2&#45;&gt;Node3</title>
 <g id="a_edge2_Node000002_Node000003"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M284.39,-41C292.46,-41 300.64,-41 308.55,-41"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="308.4,-44.5 318.4,-41 308.4,-37.5 308.4,-44.5"/>
+<path fill="none" stroke="#63b8ff" d="M284.36,-49.07C331.5,-52.49 393.65,-57 441.96,-60.5"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="441.56,-63.98 451.79,-61.22 442.07,-57 441.56,-63.98"/>
 </a>
 </g>
 </g>
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="namespacebattery_v2.html#affe6e1176611f2db495c2495e6bdd6ec" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="567.62,-82 469.88,-82 469.88,-50 567.62,-50 567.62,-82"/>
-<text text-anchor="start" x="477.88" y="-68.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.effective</text>
-<text text-anchor="middle" x="518.75" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">_capacity_wh</text>
+<g id="a_Node000004"><a xlink:href="namespacebattery_v2.html#aecfb42e205fe14aa239afe1e5f5981cb" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="417.75,-38 320,-38 320,-6 417.75,-6 417.75,-38"/>
+<text text-anchor="start" x="328" y="-24.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.simulate</text>
+<text text-anchor="middle" x="368.88" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">_mission</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node4 -->
-<g id="edge3_Node000003_Node000004" class="edge">
-<title>Node3&#45;&gt;Node4</title>
-<g id="a_edge3_Node000003_Node000004"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M417.89,-49.12C430.8,-51.3 444.92,-53.69 458.37,-55.96"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="457.54,-59.37 467.98,-57.59 458.71,-52.47 457.54,-59.37"/>
+<!-- Node2&#45;&gt;Node4 -->
+<g id="edge3_Node000002_Node000004" class="edge">
+<title>Node2&#45;&gt;Node4</title>
+<g id="a_edge3_Node000002_Node000004"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M284.39,-33.97C292.46,-32.81 300.64,-31.64 308.55,-30.5"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="309.02,-33.97 318.42,-29.09 308.02,-27.04 309.02,-33.97"/>
+</a>
+</g>
+</g>
+<!-- Node4&#45;&gt;Node3 -->
+<g id="edge5_Node000004_Node000003" class="edge">
+<title>Node4&#45;&gt;Node3</title>
+<g id="a_edge5_Node000004_Node000003"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M417.89,-36.29C428.69,-39.5 440.33,-42.96 451.72,-46.35"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="450.5,-49.64 461.08,-49.14 452.5,-42.93 450.5,-49.64"/>
 </a>
 </g>
 </g>
 <!-- Node5 -->
 <g id="Node000005" class="node">
 <title>Node5</title>
-<g id="a_Node000005"><a xlink:href="namespacebattery_v2.html#af248bd08982771567965a793c77a9ab3" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="583.75,-32 453.75,-32 453.75,0 583.75,0 583.75,-32"/>
-<text text-anchor="start" x="461.75" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.sample_random</text>
-<text text-anchor="middle" x="518.75" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">_inputs</text>
+<g id="a_Node000005"><a xlink:href="namespacebattery_v2.html#affe6e1176611f2db495c2495e6bdd6ec" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="567.62,-32 469.88,-32 469.88,0 567.62,0 567.62,-32"/>
+<text text-anchor="start" x="477.88" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.effective</text>
+<text text-anchor="middle" x="518.75" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">_capacity_wh</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node5 -->
-<g id="edge4_Node000003_Node000005" class="edge">
-<title>Node3&#45;&gt;Node5</title>
-<g id="a_edge4_Node000003_Node000005"><a xlink:title=" ">
-<path fill="none" stroke="#63b8ff" d="M417.89,-32.88C425.65,-31.57 433.86,-30.18 442.1,-28.79"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="442.54,-32.27 451.81,-27.15 441.37,-25.36 442.54,-32.27"/>
+<!-- Node4&#45;&gt;Node5 -->
+<g id="edge4_Node000004_Node000005" class="edge">
+<title>Node4&#45;&gt;Node5</title>
+<g id="a_edge4_Node000004_Node000005"><a xlink:title=" ">
+<path fill="none" stroke="#63b8ff" d="M417.89,-20.05C430.8,-19.53 444.92,-18.96 458.37,-18.41"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="458.11,-21.92 467.96,-18.02 457.83,-14.93 458.11,-21.92"/>
 </a>
 </g>
 </g>

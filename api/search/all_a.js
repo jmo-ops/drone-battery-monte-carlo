@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['payload_5fpenalty_5fw_5fper_5flb_0',['payload_penalty_w_per_lb',['../classbattery_v2_1_1_battery_config.html#af6be93dd8b6fc7b7103aa1cd8247049b',1,'batteryV2::BatteryConfig']]],
-  ['plot_5fcontainer_1',['plot_container',['../classbattery_v2_1_1_monte_carlo_g_u_i.html#a79648fad4edaaa0ea564c33376edd2c0',1,'batteryV2::MonteCarloGUI']]],
-  ['process_5fgenerator_2',['process_generator',['../namespacebattery_v2.html#ab0f783128b1bd9d942d65f8da46a1da8',1,'batteryV2']]],
-  ['process_5fgenerator_5fextreme_3',['process_generator_extreme',['../namespacebattery_v2.html#a5fad548f1d812962fab2729d76b85e38',1,'batteryV2']]]
+  ['safety_5fenergy_5ffraction_0',['safety_energy_fraction',['../classbattery_v2_1_1_mission_config.html#a4671569ebc43648aa8346998bf3fc733',1,'batteryV2::MissionConfig']]],
+  ['sample_5fextreme_5finputs_1',['sample_extreme_inputs',['../namespacebattery_v2.html#a12a82ab0f3070f3f3081ff6589fd929b',1,'batteryV2']]],
+  ['sample_5frandom_5finputs_2',['sample_random_inputs',['../namespacebattery_v2.html#af248bd08982771567965a793c77a9ab3',1,'batteryV2']]],
+  ['simulate_5fmission_3',['simulate_mission',['../namespacebattery_v2.html#aecfb42e205fe14aa239afe1e5f5981cb',1,'batteryV2']]],
+  ['summarize_5fresults_4',['summarize_results',['../namespacebattery_v2.html#a0af7214a83432d16096b4812474093be',1,'batteryV2']]],
+  ['summary_5ftext_5',['summary_text',['../classbattery_v2_1_1_monte_carlo_g_u_i.html#a3822324ef896924528e62127cf1516ae',1,'batteryV2::MonteCarloGUI']]]
 ];

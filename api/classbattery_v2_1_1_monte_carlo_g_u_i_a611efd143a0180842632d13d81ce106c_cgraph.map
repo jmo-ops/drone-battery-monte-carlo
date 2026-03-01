@@ -1,6 +1,6 @@
 <map id="batteryV2.MonteCarloGUI.run_extreme_simulation" name="batteryV2.MonteCarloGUI.run_extreme_simulation">
-<area shape="rect" id="Node000001" title="Constructs the &quot;Extreme Conditions&quot; dashboard." alt="" coords="5,72,200,115"/>
-<area shape="rect" id="Node000002" href="$classbattery_v2_1_1_monte_carlo_g_u_i.html#a51e7e587954e3cceaea5ff17ad8aa75d" title="Refreshes the histogram for extreme simulation results." alt="" coords="248,5,428,48"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,200,115"/>
+<area shape="rect" id="Node000002" href="$classbattery_v2_1_1_monte_carlo_g_u_i.html#a51e7e587954e3cceaea5ff17ad8aa75d" title=" " alt="" coords="248,5,428,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,69,244,50,246,55,181,74"/>
 <area shape="rect" id="Node000003" href="$namespacebattery_v2.html#a0d381538536ff5ceaa0cb593457e986f" title=" " alt="" coords="267,72,409,115"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,91,251,91,251,96,200,96"/>

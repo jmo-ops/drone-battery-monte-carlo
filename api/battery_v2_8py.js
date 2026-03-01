@@ -1,6 +1,5 @@
 var battery_v2_8py =
 [
-    [ "batteryV2.BatteryConfig", "classbattery_v2_1_1_battery_config.html", "classbattery_v2_1_1_battery_config" ],
     [ "batteryV2.MissionConfig", "classbattery_v2_1_1_mission_config.html", "classbattery_v2_1_1_mission_config" ],
     [ "batteryV2.MonteCarloGUI", "classbattery_v2_1_1_monte_carlo_g_u_i.html", "classbattery_v2_1_1_monte_carlo_g_u_i" ],
     [ "batteryV2.effective_capacity_wh", "namespacebattery_v2.html#affe6e1176611f2db495c2495e6bdd6ec", null ],

@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title="Constructs the tabbed interface for the application.">
+<g id="a_Node000001"><a xlink:title=" ">
 <polygon fill="#999999" stroke="#666666" points="132.25,-82 0,-82 0,-50 132.25,-50 132.25,-82"/>
 <text text-anchor="start" x="8" y="-68.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.MonteCarloGUI.</text>
 <text text-anchor="middle" x="66.12" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">_build_tabs</text>
@@ -40,7 +40,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="classbattery_v2_1_1_monte_carlo_g_u_i.html#a779f1457bb1fa50d8f55c636b48c0967" target="_top" xlink:title="Builds the primary simulation dashboard.">
+<g id="a_Node000003"><a xlink:href="classbattery_v2_1_1_monte_carlo_g_u_i.html#a779f1457bb1fa50d8f55c636b48c0967" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="313.62,-82 181.38,-82 181.38,-50 313.62,-50 313.62,-82"/>
 <text text-anchor="start" x="189.38" y="-68.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.MonteCarloGUI.</text>
 <text text-anchor="middle" x="247.5" y="-56.5" font-family="Helvetica,sans-Serif" font-size="10.00">_build_widgets</text>
@@ -59,7 +59,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="classbattery_v2_1_1_monte_carlo_g_u_i.html#a9ac8fb9e7c9b79aac8a389fb85026221" target="_top" xlink:title="Generates a formatted string summarizing all mission and battery constants.">
+<g id="a_Node000004"><a xlink:href="classbattery_v2_1_1_monte_carlo_g_u_i.html#a9ac8fb9e7c9b79aac8a389fb85026221" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="326.75,-32 168.25,-32 168.25,0 326.75,0 326.75,-32"/>
 <text text-anchor="start" x="176.25" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">batteryV2.MonteCarloGUI.</text>
 <text text-anchor="middle" x="247.5" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">_generate_parameters_summary</text>

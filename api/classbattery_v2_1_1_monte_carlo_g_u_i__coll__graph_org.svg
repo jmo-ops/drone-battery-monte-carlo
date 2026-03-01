@@ -33,11 +33,11 @@
 <text text-anchor="start" x="4" y="-258.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="14" y="-258.5" font-family="Helvetica,sans-Serif" font-size="10.00">extreme_canvas</text>
 <text text-anchor="start" x="4" y="-242.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="14" y="-242.5" font-family="Helvetica,sans-Serif" font-size="10.00">num_runs_var</text>
+<text text-anchor="start" x="14" y="-242.5" font-family="Helvetica,sans-Serif" font-size="10.00">summary_text</text>
 <text text-anchor="start" x="4" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="14" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00">summary_text</text>
+<text text-anchor="start" x="14" y="-226.5" font-family="Helvetica,sans-Serif" font-size="10.00">plot_container</text>
 <text text-anchor="start" x="4" y="-210.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
-<text text-anchor="start" x="14" y="-210.5" font-family="Helvetica,sans-Serif" font-size="10.00">plot_container</text>
+<text text-anchor="start" x="14" y="-210.5" font-family="Helvetica,sans-Serif" font-size="10.00">num_runs_var</text>
 <text text-anchor="start" x="4" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>
 <text text-anchor="start" x="14" y="-194.5" font-family="Helvetica,sans-Serif" font-size="10.00">extreme_runs_var</text>
 <text text-anchor="start" x="4" y="-178.5" font-family="Helvetica,sans-Serif" font-size="10.00">+</text>

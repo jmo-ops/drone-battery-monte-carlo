@@ -1,9 +1,10 @@
 <map id="batteryV2.process_generator" name="batteryV2.process_generator">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,194,73"/>
-<area shape="rect" id="Node000002" href="$namespacebattery_v2.html#aecfb42e205fe14aa239afe1e5f5981cb" title=" " alt="" coords="242,39,372,81"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,57,226,57,226,63,194,63"/>
-<area shape="rect" id="Node000003" href="$namespacebattery_v2.html#affe6e1176611f2db495c2495e6bdd6ec" title=" " alt="" coords="442,5,572,48"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,47,426,37,427,43,373,52"/>
-<area shape="rect" id="Node000004" href="$namespacebattery_v2.html#af248bd08982771567965a793c77a9ab3" title=" " alt="" coords="420,72,593,115"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="373,68,405,74,404,79,372,73"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,43,194,69"/>
+<area shape="rect" id="Node000002" href="$namespacebattery_v2.html#af248bd08982771567965a793c77a9ab3" title=" " alt="" coords="420,5,593,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,47,404,31,404,37,194,52"/>
+<area shape="rect" id="Node000003" href="$namespacebattery_v2.html#aecfb42e205fe14aa239afe1e5f5981cb" title=" " alt="" coords="242,64,372,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="195,67,227,71,226,77,194,72"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="371,64,417,50,418,55,373,69"/>
+<area shape="rect" id="Node000004" href="$namespacebattery_v2.html#affe6e1176611f2db495c2495e6bdd6ec" title=" " alt="" coords="442,72,572,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="372,85,426,87,426,93,372,91"/>
 </map>

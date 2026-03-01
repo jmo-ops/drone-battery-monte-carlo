@@ -18,57 +18,6 @@
             <Path>namespacebattery_v2.html</Path>
           <Subnodes>
              <Node>
-              <Name>BatteryConfig</Name>
-              <Path>classbattery_v2_1_1_battery_config.html</Path>
-            <Subnodes>
-               <Node>
-                <Name>__init__</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a01bd6c0552bae56729b044ed2ce12861</Anchor>
-               </Node>
-               <Node>
-                <Name>base_power_w</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a3a7f640e88e17f8f8452d2dc0bb8e7d7</Anchor>
-               </Node>
-               <Node>
-                <Name>capacity_wh</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a15d6c62bef7154d880b1971af19555be</Anchor>
-               </Node>
-               <Node>
-                <Name>cold_capacity_penalty_per_deg</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a6d23bef43c87e0db5691a0a92432ec60</Anchor>
-               </Node>
-               <Node>
-                <Name>cold_power_penalty_per_deg</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>ab66a1bedb2a7f8a4bdc401b5b2578b39</Anchor>
-               </Node>
-               <Node>
-                <Name>key</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a1b950488cf33e69d5962590ce2feaef0</Anchor>
-               </Node>
-               <Node>
-                <Name>label</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>ad76a7d980f080291179fdb583e37afc5</Anchor>
-               </Node>
-               <Node>
-                <Name>payload_penalty_w_per_lb</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>af6be93dd8b6fc7b7103aa1cd8247049b</Anchor>
-               </Node>
-               <Node>
-                <Name>wind_penalty_w_per_mph</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a16753a439063625885b36547fd8865e1</Anchor>
-               </Node>
-              </Subnodes>
-             </Node>
-             <Node>
               <Name>MissionConfig</Name>
               <Path>classbattery_v2_1_1_mission_config.html</Path>
             <Subnodes>
@@ -308,57 +257,6 @@
             <Path>namespacebattery_v2.html</Path>
           <Subnodes>
              <Node>
-              <Name>BatteryConfig</Name>
-              <Path>classbattery_v2_1_1_battery_config.html</Path>
-            <Subnodes>
-               <Node>
-                <Name>__init__</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a01bd6c0552bae56729b044ed2ce12861</Anchor>
-               </Node>
-               <Node>
-                <Name>base_power_w</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a3a7f640e88e17f8f8452d2dc0bb8e7d7</Anchor>
-               </Node>
-               <Node>
-                <Name>capacity_wh</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a15d6c62bef7154d880b1971af19555be</Anchor>
-               </Node>
-               <Node>
-                <Name>cold_capacity_penalty_per_deg</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a6d23bef43c87e0db5691a0a92432ec60</Anchor>
-               </Node>
-               <Node>
-                <Name>cold_power_penalty_per_deg</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>ab66a1bedb2a7f8a4bdc401b5b2578b39</Anchor>
-               </Node>
-               <Node>
-                <Name>key</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a1b950488cf33e69d5962590ce2feaef0</Anchor>
-               </Node>
-               <Node>
-                <Name>label</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>ad76a7d980f080291179fdb583e37afc5</Anchor>
-               </Node>
-               <Node>
-                <Name>payload_penalty_w_per_lb</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>af6be93dd8b6fc7b7103aa1cd8247049b</Anchor>
-               </Node>
-               <Node>
-                <Name>wind_penalty_w_per_mph</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a16753a439063625885b36547fd8865e1</Anchor>
-               </Node>
-              </Subnodes>
-             </Node>
-             <Node>
               <Name>MissionConfig</Name>
               <Path>classbattery_v2_1_1_mission_config.html</Path>
             <Subnodes>
@@ -550,57 +448,6 @@
             <Name>batteryV2.py</Name>
             <Path>battery_v2_8py.html</Path>
           <Subnodes>
-             <Node>
-              <Name>batteryV2.BatteryConfig</Name>
-              <Path>classbattery_v2_1_1_battery_config.html</Path>
-            <Subnodes>
-               <Node>
-                <Name>__init__</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a01bd6c0552bae56729b044ed2ce12861</Anchor>
-               </Node>
-               <Node>
-                <Name>base_power_w</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a3a7f640e88e17f8f8452d2dc0bb8e7d7</Anchor>
-               </Node>
-               <Node>
-                <Name>capacity_wh</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a15d6c62bef7154d880b1971af19555be</Anchor>
-               </Node>
-               <Node>
-                <Name>cold_capacity_penalty_per_deg</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a6d23bef43c87e0db5691a0a92432ec60</Anchor>
-               </Node>
-               <Node>
-                <Name>cold_power_penalty_per_deg</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>ab66a1bedb2a7f8a4bdc401b5b2578b39</Anchor>
-               </Node>
-               <Node>
-                <Name>key</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a1b950488cf33e69d5962590ce2feaef0</Anchor>
-               </Node>
-               <Node>
-                <Name>label</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>ad76a7d980f080291179fdb583e37afc5</Anchor>
-               </Node>
-               <Node>
-                <Name>payload_penalty_w_per_lb</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>af6be93dd8b6fc7b7103aa1cd8247049b</Anchor>
-               </Node>
-               <Node>
-                <Name>wind_penalty_w_per_mph</Name>
-                <Path>classbattery_v2_1_1_battery_config.html</Path>
-                <Anchor>a16753a439063625885b36547fd8865e1</Anchor>
-               </Node>
-              </Subnodes>
-             </Node>
              <Node>
               <Name>batteryV2.MissionConfig</Name>
               <Path>classbattery_v2_1_1_mission_config.html</Path>

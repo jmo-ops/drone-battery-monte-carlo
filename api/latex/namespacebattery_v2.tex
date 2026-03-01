@@ -3,8 +3,6 @@
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}}
-\item 
 class \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}
 \item 
 class \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i}{Monte\+Carlo\+GUI}}
@@ -16,9 +14,9 @@ class \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i}{Monte\+Carlo\+
 \item 
 \doxymbox{\hyperlink{namespacebattery_v2_a12a82ab0f3070f3f3081ff6589fd929b}{sample\+\_\+extreme\+\_\+inputs}} ()
 \item 
-float \doxymbox{\hyperlink{namespacebattery_v2_affe6e1176611f2db495c2495e6bdd6ec}{effective\+\_\+capacity\+\_\+wh}} (\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}} battery, float temp\+\_\+f)
+float \doxymbox{\hyperlink{namespacebattery_v2_affe6e1176611f2db495c2495e6bdd6ec}{effective\+\_\+capacity\+\_\+wh}} (Battery\+Config battery, float temp\+\_\+f)
 \item 
-\doxymbox{\hyperlink{namespacebattery_v2_aecfb42e205fe14aa239afe1e5f5981cb}{simulate\+\_\+mission}} (\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}} battery, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission, rng\+\_\+inputs=None)
+\doxymbox{\hyperlink{namespacebattery_v2_aecfb42e205fe14aa239afe1e5f5981cb}{simulate\+\_\+mission}} (Battery\+Config battery, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission, rng\+\_\+inputs=None)
 \item 
 \doxymbox{\hyperlink{namespacebattery_v2_ab0f783128b1bd9d942d65f8da46a1da8}{process\+\_\+generator}} (int num\+\_\+runs, batteries, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission)
 \item 
@@ -28,12 +26,12 @@ float \doxymbox{\hyperlink{namespacebattery_v2_affe6e1176611f2db495c2495e6bdd6ec
 \item 
 \doxymbox{\hyperlink{namespacebattery_v2_a0d381538536ff5ceaa0cb593457e986f}{run\+\_\+monte\+\_\+carlo\+\_\+extreme}} (int num\+\_\+runs, batteries, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission)
 \item 
-\doxymbox{\hyperlink{namespacebattery_v2_a0af7214a83432d16096b4812474093be}{summarize\+\_\+results}} (records, \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}} battery\+\_\+config, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission\+\_\+config)
+\doxymbox{\hyperlink{namespacebattery_v2_a0af7214a83432d16096b4812474093be}{summarize\+\_\+results}} (records, Battery\+Config battery\+\_\+config, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission\+\_\+config)
 \item 
 \doxymbox{\hyperlink{namespacebattery_v2_ac295a887f44787458bbce044c155efd6}{generate\+\_\+docs}} ()
-\begin{DoxyCompactList}\small\item\em Executes the Doxygen command to refresh documentation. \end{DoxyCompactList}\item 
+\item 
 \doxymbox{\hyperlink{namespacebattery_v2_a715155bd28d0a42bff647cd9b38fb7c9}{main}} ()
-\begin{DoxyCompactList}\small\item\em Main entry point for the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
@@ -43,7 +41,7 @@ float \doxymbox{\hyperlink{namespacebattery_v2_affe6e1176611f2db495c2495e6bdd6ec
 \index{effective\_capacity\_wh@{effective\_capacity\_wh}!batteryV2@{batteryV2}}
 \doxysubsubsection{\texorpdfstring{effective\_capacity\_wh()}{effective\_capacity\_wh()}}
 {\footnotesize\ttfamily \label{namespacebattery_v2_affe6e1176611f2db495c2495e6bdd6ec} 
- float battery\+V2.\+effective\+\_\+capacity\+\_\+wh (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}}}]{battery}{, }\item[{float}]{temp\+\_\+f}{}\end{DoxyParamCaption})}
+ float battery\+V2.\+effective\+\_\+capacity\+\_\+wh (\begin{DoxyParamCaption}\item[{Battery\+Config}]{battery}{, }\item[{float}]{temp\+\_\+f}{}\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}@brief Compute effective capacity (Wh) as a function of temperature.
 
@@ -59,21 +57,19 @@ Effective capacity decreases below 70°F (linear), clamped to max 50% loss.
 {\footnotesize\ttfamily \label{namespacebattery_v2_ac295a887f44787458bbce044c155efd6} 
 battery\+V2.\+generate\+\_\+docs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-
-
-Executes the Doxygen command to refresh documentation. 
-
-\Hypertarget{namespacebattery_v2_a715155bd28d0a42bff647cd9b38fb7c9}\index{batteryV2@{batteryV2}!main@{main}}
+\begin{DoxyVerb}@brief Executes the Doxygen command to refresh documentation.
+@details Runs 'doxygen Doxyfile' and prints a success/failure message.
+\end{DoxyVerb}
+ \Hypertarget{namespacebattery_v2_a715155bd28d0a42bff647cd9b38fb7c9}\index{batteryV2@{batteryV2}!main@{main}}
 \index{main@{main}!batteryV2@{batteryV2}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily \label{namespacebattery_v2_a715155bd28d0a42bff647cd9b38fb7c9} 
 battery\+V2.\+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-
-
-Main entry point for the application. 
-
-Here is the call graph for this function:\+\nopagebreak
+\begin{DoxyVerb}@brief Main entry point for the application.
+@details Creates the Tk root window, instantiates the GUI, and enters the Tk event loop.
+\end{DoxyVerb}
+ Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -187,8 +183,8 @@ battery\+V2.\+sample\+\_\+extreme\+\_\+inputs (\begin{DoxyParamCaption}{}{}\end{
 
 Uses triangular distributions biased toward harsher conditions:
   - wind: 10–20 mph, skewed high
-  - temperature: 10–95 °F, skewed low (cold-biased)
-  - payload: 2.5–5 lb, skewed high
+  - temperature: 10–40 °F, skewed low (cold-biased)
+  - payload: 4–5 lb, skewed high
   - distance_factor: 1.0–1.1, skewed high
 
 @return (wind_mph, temp_f, payload_lb, distance_factor)
@@ -213,7 +209,7 @@ Nominal sampling uses uniform distributions:
 \index{simulate\_mission@{simulate\_mission}!batteryV2@{batteryV2}}
 \doxysubsubsection{\texorpdfstring{simulate\_mission()}{simulate\_mission()}}
 {\footnotesize\ttfamily \label{namespacebattery_v2_aecfb42e205fe14aa239afe1e5f5981cb} 
-battery\+V2.\+simulate\+\_\+mission (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}}}]{battery}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}}]{mission}{, }\item[{}]{rng\+\_\+inputs}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+battery\+V2.\+simulate\+\_\+mission (\begin{DoxyParamCaption}\item[{Battery\+Config}]{battery}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}}]{mission}{, }\item[{}]{rng\+\_\+inputs}{ = {\ttfamily None}}\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}@brief Simulate one mission trial for a given battery under sampled conditions.
 
@@ -243,21 +239,14 @@ Steps:
 \index{summarize\_results@{summarize\_results}!batteryV2@{batteryV2}}
 \doxysubsubsection{\texorpdfstring{summarize\_results()}{summarize\_results()}}
 {\footnotesize\ttfamily \label{namespacebattery_v2_a0af7214a83432d16096b4812474093be} 
-battery\+V2.\+summarize\+\_\+results (\begin{DoxyParamCaption}\item[{}]{records}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}}}]{battery\+\_\+config}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}}]{mission\+\_\+config}{}\end{DoxyParamCaption})}
+battery\+V2.\+summarize\+\_\+results (\begin{DoxyParamCaption}\item[{}]{records}{, }\item[{Battery\+Config}]{battery\+\_\+config}{, }\item[{\doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}}}]{mission\+\_\+config}{}\end{DoxyParamCaption})}
 
 \begin{DoxyVerb}@brief Compute summary distribution statistics for one battery’s records.
 
 @param records Per-run result records for a single battery label.
 @param battery_config Battery settings for the battery being summarized.
 @param mission_config Mission settings for the runs being summarized.
-@return dict Summary fields:
-        - mean_remaining_pct: float
-        - p5_remaining_pct: float
-        - p95_remaining_pct: float
-        - success_rate: float
-        - avg_energy_used_wh: float
-        - avg_flight_time_s: float
-        - est_deliveries: float
+@return dict Summary fields.
 \end{DoxyVerb}
  Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]

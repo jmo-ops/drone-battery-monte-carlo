@@ -2,15 +2,6 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
-      <Name>batteryV2::BatteryConfig</Name>
-      <APILanguage>python</APILanguage>
-      <Type>cl</Type>
-      <Scope>batteryV2.BatteryConfig</Scope>
-    </TokenIdentifier>
-    <Path>classbattery_v2_1_1_battery_config.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>batteryV2::MissionConfig</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
@@ -35,17 +26,6 @@
       <Scope>batteryV2</Scope>
     </TokenIdentifier>
     <Path>namespacebattery_v2.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>__init__</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>batteryV2.BatteryConfig</Scope>
-    </TokenIdentifier>
-    <Path>classbattery_v2_1_1_battery_config.html</Path>
-    <Anchor>a01bd6c0552bae56729b044ed2ce12861</Anchor>
-    <DeclaredIn>batteryV2.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -137,16 +117,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>base_power_w</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>batteryV2.BatteryConfig</Scope>
-    </TokenIdentifier>
-    <Path>classbattery_v2_1_1_battery_config.html</Path>
-    <Anchor>a3a7f640e88e17f8f8452d2dc0bb8e7d7</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>batteries</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -184,36 +154,6 @@
     </TokenIdentifier>
     <Path>classbattery_v2_1_1_monte_carlo_g_u_i.html</Path>
     <Anchor>a2fd231a1528afe574184cc9b85702ee7</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>capacity_wh</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>batteryV2.BatteryConfig</Scope>
-    </TokenIdentifier>
-    <Path>classbattery_v2_1_1_battery_config.html</Path>
-    <Anchor>a15d6c62bef7154d880b1971af19555be</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>cold_capacity_penalty_per_deg</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>batteryV2.BatteryConfig</Scope>
-    </TokenIdentifier>
-    <Path>classbattery_v2_1_1_battery_config.html</Path>
-    <Anchor>a6d23bef43c87e0db5691a0a92432ec60</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>cold_power_penalty_per_deg</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>batteryV2.BatteryConfig</Scope>
-    </TokenIdentifier>
-    <Path>classbattery_v2_1_1_battery_config.html</Path>
-    <Anchor>ab66a1bedb2a7f8a4bdc401b5b2578b39</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -287,26 +227,6 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>key</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>batteryV2.BatteryConfig</Scope>
-    </TokenIdentifier>
-    <Path>classbattery_v2_1_1_battery_config.html</Path>
-    <Anchor>a1b950488cf33e69d5962590ce2feaef0</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>label</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>batteryV2.BatteryConfig</Scope>
-    </TokenIdentifier>
-    <Path>classbattery_v2_1_1_battery_config.html</Path>
-    <Anchor>ad76a7d980f080291179fdb583e37afc5</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>mission</Name>
       <APILanguage>python</APILanguage>
       <Type>data</Type>
@@ -334,16 +254,6 @@
     </TokenIdentifier>
     <Path>classbattery_v2_1_1_monte_carlo_g_u_i.html</Path>
     <Anchor>a40ced7de3cab48d58c93553d3800be3b</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>payload_penalty_w_per_lb</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>batteryV2.BatteryConfig</Scope>
-    </TokenIdentifier>
-    <Path>classbattery_v2_1_1_battery_config.html</Path>
-    <Anchor>af6be93dd8b6fc7b7103aa1cd8247049b</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -406,16 +316,6 @@
     </TokenIdentifier>
     <Path>classbattery_v2_1_1_monte_carlo_g_u_i.html</Path>
     <Anchor>a3822324ef896924528e62127cf1516ae</Anchor>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>wind_penalty_w_per_mph</Name>
-      <APILanguage>python</APILanguage>
-      <Type>data</Type>
-      <Scope>batteryV2.BatteryConfig</Scope>
-    </TokenIdentifier>
-    <Path>classbattery_v2_1_1_battery_config.html</Path>
-    <Anchor>a16753a439063625885b36547fd8865e1</Anchor>
   </Token>
   <Token>
     <TokenIdentifier>

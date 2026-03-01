@@ -8,8 +8,6 @@ Monte Carlo simulation + GUI for comparing drone battery configurations.
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{battery\+V2.\+Battery\+Config}}
-\item 
 class \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{battery\+V2.\+Mission\+Config}}
 \item 
 class \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i}{battery\+V2.\+Monte\+Carlo\+GUI}}
@@ -26,9 +24,9 @@ namespace \doxymbox{\hyperlink{namespacebattery_v2}{battery\+V2}}
 \item 
 \doxymbox{\hyperlink{namespacebattery_v2_a12a82ab0f3070f3f3081ff6589fd929b}{battery\+V2.\+sample\+\_\+extreme\+\_\+inputs}} ()
 \item 
-float \doxymbox{\hyperlink{namespacebattery_v2_affe6e1176611f2db495c2495e6bdd6ec}{battery\+V2.\+effective\+\_\+capacity\+\_\+wh}} (\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}} battery, float temp\+\_\+f)
+float \doxymbox{\hyperlink{namespacebattery_v2_affe6e1176611f2db495c2495e6bdd6ec}{battery\+V2.\+effective\+\_\+capacity\+\_\+wh}} (Battery\+Config battery, float temp\+\_\+f)
 \item 
-\doxymbox{\hyperlink{namespacebattery_v2_aecfb42e205fe14aa239afe1e5f5981cb}{battery\+V2.\+simulate\+\_\+mission}} (\doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}} battery, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission, rng\+\_\+inputs=None)
+\doxymbox{\hyperlink{namespacebattery_v2_aecfb42e205fe14aa239afe1e5f5981cb}{battery\+V2.\+simulate\+\_\+mission}} (Battery\+Config battery, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission, rng\+\_\+inputs=None)
 \item 
 \doxymbox{\hyperlink{namespacebattery_v2_ab0f783128b1bd9d942d65f8da46a1da8}{battery\+V2.\+process\+\_\+generator}} (int num\+\_\+runs, batteries, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission)
 \item 
@@ -38,12 +36,12 @@ float \doxymbox{\hyperlink{namespacebattery_v2_affe6e1176611f2db495c2495e6bdd6ec
 \item 
 \doxymbox{\hyperlink{namespacebattery_v2_a0d381538536ff5ceaa0cb593457e986f}{battery\+V2.\+run\+\_\+monte\+\_\+carlo\+\_\+extreme}} (int num\+\_\+runs, batteries, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission)
 \item 
-\doxymbox{\hyperlink{namespacebattery_v2_a0af7214a83432d16096b4812474093be}{battery\+V2.\+summarize\+\_\+results}} (records, \doxymbox{\hyperlink{classbattery_v2_1_1_battery_config}{Battery\+Config}} battery\+\_\+config, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission\+\_\+config)
+\doxymbox{\hyperlink{namespacebattery_v2_a0af7214a83432d16096b4812474093be}{battery\+V2.\+summarize\+\_\+results}} (records, Battery\+Config battery\+\_\+config, \doxymbox{\hyperlink{classbattery_v2_1_1_mission_config}{Mission\+Config}} mission\+\_\+config)
 \item 
 \doxymbox{\hyperlink{namespacebattery_v2_ac295a887f44787458bbce044c155efd6}{battery\+V2.\+generate\+\_\+docs}} ()
-\begin{DoxyCompactList}\small\item\em Executes the Doxygen command to refresh documentation. \end{DoxyCompactList}\item 
+\item 
 \doxymbox{\hyperlink{namespacebattery_v2_a715155bd28d0a42bff647cd9b38fb7c9}{battery\+V2.\+main}} ()
-\begin{DoxyCompactList}\small\item\em Main entry point for the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

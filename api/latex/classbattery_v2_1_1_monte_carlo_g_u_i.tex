@@ -2,7 +2,8 @@
 \hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i}{}\label{classbattery_v2_1_1_monte_carlo_g_u_i}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
 
 
-Collaboration diagram for battery\+V2.\+Monte\+Carlo\+GUI:\+\nopagebreak
+Collaboration diagram for battery\+V2.\+Monte\+Carlo\+GUI:\+
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,9 +16,9 @@ Collaboration diagram for battery\+V2.\+Monte\+Carlo\+GUI:\+\nopagebreak
 \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_ac2e2abc2276416044e75a6507f35da40}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a11b3b7dc935da5864fd378880fae1ec9}{root}})
 \item 
 \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_ad20f02647e50ac7a533c9e72e8071130}{run\+\_\+simulation}} (self)
-\begin{DoxyCompactList}\small\item\em Executes the standard Monte Carlo simulation. \end{DoxyCompactList}\item 
+\item 
 \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a611efd143a0180842632d13d81ce106c}{run\+\_\+extreme\+\_\+simulation}} (self)
-\begin{DoxyCompactList}\small\item\em Constructs the "{}\+Extreme Conditions"{} dashboard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,11 +40,11 @@ list \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a204491c01b21643
 \item 
 \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_ab3f7f16a6436ccab56016e924aded8fb}{extreme\+\_\+canvas}} = None
 \item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a3822324ef896924528e62127cf1516ae}{summary\+\_\+text}} = None
+\item 
+\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a79648fad4edaaa0ea564c33376edd2c0}{plot\+\_\+container}} = None
+\item 
 \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a40ced7de3cab48d58c93553d3800be3b}{num\+\_\+runs\+\_\+var}} = tk.\+String\+Var(value="{}500"{})
-\item 
-\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a3822324ef896924528e62127cf1516ae}{summary\+\_\+text}} = tk.\+Text(summary\+\_\+inner, height=20, wrap="{}word"{})
-\item 
-\doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a79648fad4edaaa0ea564c33376edd2c0}{plot\+\_\+container}} = plot\+\_\+frame
 \item 
 \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_aa87e9eefcf141bfe28697282bd23a9de}{extreme\+\_\+runs\+\_\+var}} = tk.\+String\+Var(value="{}500"{})
 \item 
@@ -55,17 +56,17 @@ list \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a204491c01b21643
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a8945fb5c765a8525ce45e40daabf2065}{\+\_\+build\+\_\+tabs}} (self)
-\begin{DoxyCompactList}\small\item\em Constructs the tabbed interface for the application. \end{DoxyCompactList}\item 
+\item 
 \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a779f1457bb1fa50d8f55c636b48c0967}{\+\_\+build\+\_\+widgets}} (self, parent)
-\begin{DoxyCompactList}\small\item\em Builds the primary simulation dashboard. \end{DoxyCompactList}\item 
+\item 
 \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a61633bfee5719a0c083e20e04eeed9c7}{\+\_\+build\+\_\+extreme\+\_\+widgets}} (self, parent)
 \item 
 \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a67f25aa73b33a439ae78ad47aebbddc6}{\+\_\+plot\+\_\+distributions}} (self, results)
-\begin{DoxyCompactList}\small\item\em Updates the histogram display for extreme simulation results. \end{DoxyCompactList}\item 
+\item 
 \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a51e7e587954e3cceaea5ff17ad8aa75d}{\+\_\+plot\+\_\+extreme\+\_\+distributions}} (self, results)
-\begin{DoxyCompactList}\small\item\em Refreshes the histogram for extreme simulation results. \end{DoxyCompactList}\item 
+\item 
 \doxymbox{\hyperlink{classbattery_v2_1_1_monte_carlo_g_u_i_a9ac8fb9e7c9b79aac8a389fb85026221}{\+\_\+generate\+\_\+parameters\+\_\+summary}} (self)
-\begin{DoxyCompactList}\small\item\em Generates a formatted string summarizing all mission and battery constants. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -104,16 +105,13 @@ battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+build\+\_\+extreme\+\_\+widgets (\begin{Do
 {\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a8945fb5c765a8525ce45e40daabf2065} 
 battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+build\+\_\+tabs (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-
-
-Constructs the tabbed interface for the application. 
-
-Uses a ttk.\+Notebook to create three distinct sections:\+
-\begin{DoxyEnumerate}
-\item Simulation:\+ For standard Monte Carlo runs.
-\item Parameters Summary:\+ Displays a read-\/only text summary of battery profiles.
-\item Extreme Conditions:\+ For high-\/stress "{}torture tests"{} with biased inputs 
-\end{DoxyEnumerate}Here is the call graph for this function:\+\nopagebreak
+\begin{DoxyVerb}@brief Constructs the tabbed interface for the application.
+@details Uses a ttk.Notebook to create three distinct sections:
+    - Simulation: For standard Monte Carlo runs.
+    - Parameters Summary: Displays a read-only text summary of battery profiles.
+- Extreme Conditions: For high-stress "torture tests" with biased inputs.
+\end{DoxyVerb}
+ Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -126,74 +124,62 @@ Uses a ttk.\+Notebook to create three distinct sections:\+
 {\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a779f1457bb1fa50d8f55c636b48c0967} 
 battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+build\+\_\+widgets (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{parent}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-
-
-Builds the primary simulation dashboard. 
-
-Sets up the \textquotesingle{}Simulation\textquotesingle{} tab, which includes:\+
-\begin{DoxyItemize}
-\item A \textquotesingle{}Simulation Settings\textquotesingle{} group for configuring run counts.
-\item A \textquotesingle{}Summary (Distribution)\textquotesingle{} group for displaying output statistics. 
-\begin{DoxyParams}{Parameters}
-{\em parent} & The parent widget (typically the simulation tab frame). \\
-\hline
-\end{DoxyParams}
-
-\end{DoxyItemize}\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a9ac8fb9e7c9b79aac8a389fb85026221}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_generate\_parameters\_summary@{\_generate\_parameters\_summary}}
+\begin{DoxyVerb}@brief Builds the primary simulation dashboard.
+@details Sets up the 'Simulation' tab, which includes:
+    - A 'Simulation Settings' group for configuring run counts.
+    - A 'Summary (Distribution)' group for displaying output statistics.
+    - A 'Distributions (Remaining Energy)' group for histogram plots.
+@param parent The parent widget (typically the simulation tab frame).
+\end{DoxyVerb}
+ \Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a9ac8fb9e7c9b79aac8a389fb85026221}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_generate\_parameters\_summary@{\_generate\_parameters\_summary}}
 \index{\_generate\_parameters\_summary@{\_generate\_parameters\_summary}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
 \doxysubsubsection{\texorpdfstring{\_generate\_parameters\_summary()}{\_generate\_parameters\_summary()}}
 {\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a9ac8fb9e7c9b79aac8a389fb85026221} 
 battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+generate\+\_\+parameters\+\_\+summary (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-
-
-Generates a formatted string summarizing all mission and battery constants. 
-
-Aggregates nominal/\+extreme sampling ranges, mission setup (distance, speed), and detailed battery profiles (capacity, penalties) for the UI summary tab. \begin{DoxyReturn}{Returns}
-A multi-\/line string containing the full parameter report. 
-\end{DoxyReturn}
-\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a67f25aa73b33a439ae78ad47aebbddc6}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_plot\_distributions@{\_plot\_distributions}}
+\begin{DoxyVerb}@brief Generates a formatted string summarizing all mission and battery constants.
+@details Aggregates nominal/extreme sampling ranges, mission setup (distance, speed),
+and detailed battery profiles (capacity, penalties) for the UI summary tab.
+@return A multi-line string containing the full parameter report.
+\end{DoxyVerb}
+ \Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a67f25aa73b33a439ae78ad47aebbddc6}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_plot\_distributions@{\_plot\_distributions}}
 \index{\_plot\_distributions@{\_plot\_distributions}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
 \doxysubsubsection{\texorpdfstring{\_plot\_distributions()}{\_plot\_distributions()}}
 {\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a67f25aa73b33a439ae78ad47aebbddc6} 
 battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+plot\+\_\+distributions (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{results}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-
-
-Updates the histogram display for extreme simulation results. 
-
-Functionally identical to \+\_\+plot\+\_\+distributions but targets the Extreme Conditions UI container and uses biased result data. 
-\begin{DoxyParams}{Parameters}
-{\em results} & A dictionary containing extreme/\+biased simulation data. \\
-\hline
-\end{DoxyParams}
-\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a51e7e587954e3cceaea5ff17ad8aa75d}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_plot\_extreme\_distributions@{\_plot\_extreme\_distributions}}
+\begin{DoxyVerb} @brief Updates the histogram display for extreme simulation results.
+    @details Functionally identical to _plot_distributions but targets the 
+    Extreme Conditions UI container and uses biased result data.
+    @param results A dictionary containing extreme/biased simulation data.
+\end{DoxyVerb}
+ \Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a51e7e587954e3cceaea5ff17ad8aa75d}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!\_plot\_extreme\_distributions@{\_plot\_extreme\_distributions}}
 \index{\_plot\_extreme\_distributions@{\_plot\_extreme\_distributions}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
 \doxysubsubsection{\texorpdfstring{\_plot\_extreme\_distributions()}{\_plot\_extreme\_distributions()}}
 {\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a51e7e587954e3cceaea5ff17ad8aa75d} 
 battery\+V2.\+Monte\+Carlo\+GUI.\+\_\+plot\+\_\+extreme\+\_\+distributions (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{results}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
-
-
-Refreshes the histogram for extreme simulation results. 
-
-\Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a611efd143a0180842632d13d81ce106c}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!run\_extreme\_simulation@{run\_extreme\_simulation}}
+\begin{DoxyVerb}@brief Plots histograms of remaining energy (%) for each battery under extreme Monte Carlo results.
+@param results A dict keyed by battery label containing per-run result dicts (expects "energy_remaining_pct").
+@details
+    - Destroys and recreates the Tk canvas to avoid stacking plots.
+     Creates a matplotlib Figure and draws one histogram per battery.
+    - Embeds the figure into the Extreme Conditions tab container.
+\end{DoxyVerb}
+ \Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a611efd143a0180842632d13d81ce106c}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!run\_extreme\_simulation@{run\_extreme\_simulation}}
 \index{run\_extreme\_simulation@{run\_extreme\_simulation}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
 \doxysubsubsection{\texorpdfstring{run\_extreme\_simulation()}{run\_extreme\_simulation()}}
 {\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a611efd143a0180842632d13d81ce106c} 
 battery\+V2.\+Monte\+Carlo\+GUI.\+run\+\_\+extreme\+\_\+simulation (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
 
-
-
-Constructs the "{}\+Extreme Conditions"{} dashboard. 
-
-Sets up a high-\/stress testing environment including:\+
-\begin{DoxyItemize}
-\item A \textquotesingle{}Extreme Simulation Settings\textquotesingle{} frame for run count configuration.
-\item An informational label describing the "{}\+Extreme"{} stochastic biases (wind, temp, etc.).
-\item A scrollable summary text area for distribution results.
-\item A plot container for visualizing energy distributions. 
-\end{DoxyItemize}Here is the call graph for this function:\+\nopagebreak
+\begin{DoxyVerb}@brief Constructs the "Extreme Conditions" dashboard.
+@details Sets up a high-stress testing environment including:
+    - An "Extreme Simulation Settings" frame for run count configuration.
+    - An informational label describing the "Extreme" stochastic biases (wind, temp, etc.).
+    - A scrollable summary text area for distribution results.
+    - A plot container for visualizing energy distributions.
+\end{DoxyVerb}
+ Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -206,23 +192,16 @@ Sets up a high-\/stress testing environment including:\+
 {\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_ad20f02647e50ac7a533c9e72e8071130} 
 battery\+V2.\+Monte\+Carlo\+GUI.\+run\+\_\+simulation (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
 
-
-
-Executes the standard Monte Carlo simulation. 
-
-Performs the following process:\+
-\begin{DoxyEnumerate}
-\item Validates user input for the number of runs.
-\item Calls \doxylink{namespacebattery_v2_a6767ab4344f7effdf944b81bcc495ead}{run\+\_\+monte\+\_\+carlo()} to perform stochastic trials for each battery.
-\item Generates statistical summaries (mean, P5, P95) for mission results.
-\item Calculates energy usage metrics and delivery throughput.
-\item Performs a delta comparison if multiple batteries are configured. 
-\begin{DoxyExceptions}{Exceptions}
-{\em Value\+Error} & Raised if the run count is not a positive integer. \\
-\hline
-\end{DoxyExceptions}
-
-\end{DoxyEnumerate}Here is the call graph for this function:\+\nopagebreak
+\begin{DoxyVerb}@brief Executes the standard Monte Carlo simulation.
+@details Performs the following process:
+    1. Validates user input for the number of runs.
+    2. Calls run_monte_carlo() to perform stochastic trials for each battery.
+    3. Generates statistical summaries (mean, P5, P95) for mission results.
+    4. Calculates energy usage metrics and delivery throughput.
+     5. Performs a delta comparison if multiple batteries are configured.
+@exception ValueError Raised if the run count is not a positive integer.
+\end{DoxyVerb}
+ Here is the call graph for this function:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -347,7 +326,7 @@ battery\+V2.\+Monte\+Carlo\+GUI.\+num\+\_\+runs\+\_\+var = tk.\+String\+Var(valu
 \index{plot\_container@{plot\_container}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
 \doxysubsubsection{\texorpdfstring{plot\_container}{plot\_container}}
 {\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a79648fad4edaaa0ea564c33376edd2c0} 
-battery\+V2.\+Monte\+Carlo\+GUI.\+plot\+\_\+container = plot\+\_\+frame}
+battery\+V2.\+Monte\+Carlo\+GUI.\+plot\+\_\+container = None}
 
 \Hypertarget{classbattery_v2_1_1_monte_carlo_g_u_i_a11b3b7dc935da5864fd378880fae1ec9}\index{batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}!root@{root}}
 \index{root@{root}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
@@ -359,7 +338,7 @@ battery\+V2.\+Monte\+Carlo\+GUI.\+root = root}
 \index{summary\_text@{summary\_text}!batteryV2.MonteCarloGUI@{batteryV2.MonteCarloGUI}}
 \doxysubsubsection{\texorpdfstring{summary\_text}{summary\_text}}
 {\footnotesize\ttfamily \label{classbattery_v2_1_1_monte_carlo_g_u_i_a3822324ef896924528e62127cf1516ae} 
-battery\+V2.\+Monte\+Carlo\+GUI.\+summary\+\_\+text = tk.\+Text(summary\+\_\+inner, height=20, wrap="{}word"{})}
+battery\+V2.\+Monte\+Carlo\+GUI.\+summary\+\_\+text = None}
 
 
 

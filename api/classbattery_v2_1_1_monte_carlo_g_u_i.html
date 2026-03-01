@@ -116,9 +116,7 @@ Collaboration diagram for batteryV2.MonteCarloGUI:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac2e2abc2276416044e75a6507f35da40" id="r_ac2e2abc2276416044e75a6507f35da40"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac2e2abc2276416044e75a6507f35da40">__init__</a> (self, <a class="el" href="#a11b3b7dc935da5864fd378880fae1ec9">root</a>)</td></tr>
 <tr class="memitem:ad20f02647e50ac7a533c9e72e8071130" id="r_ad20f02647e50ac7a533c9e72e8071130"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ad20f02647e50ac7a533c9e72e8071130">run_simulation</a> (self)</td></tr>
-<tr class="memdesc:ad20f02647e50ac7a533c9e72e8071130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the standard Monte Carlo simulation.  <br /></td></tr>
 <tr class="memitem:a611efd143a0180842632d13d81ce106c" id="r_a611efd143a0180842632d13d81ce106c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a611efd143a0180842632d13d81ce106c">run_extreme_simulation</a> (self)</td></tr>
-<tr class="memdesc:a611efd143a0180842632d13d81ce106c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the "Extreme Conditions" dashboard.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -131,9 +129,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2fd231a1528afe574184cc9b85702ee7" id="r_a2fd231a1528afe574184cc9b85702ee7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2fd231a1528afe574184cc9b85702ee7">canvas</a> = None</td></tr>
 <tr class="memitem:adbdfebef15811c31c872900b1f12ca04" id="r_adbdfebef15811c31c872900b1f12ca04"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adbdfebef15811c31c872900b1f12ca04">extreme_figure</a> = None</td></tr>
 <tr class="memitem:ab3f7f16a6436ccab56016e924aded8fb" id="r_ab3f7f16a6436ccab56016e924aded8fb"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab3f7f16a6436ccab56016e924aded8fb">extreme_canvas</a> = None</td></tr>
+<tr class="memitem:a3822324ef896924528e62127cf1516ae" id="r_a3822324ef896924528e62127cf1516ae"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3822324ef896924528e62127cf1516ae">summary_text</a> = None</td></tr>
+<tr class="memitem:a79648fad4edaaa0ea564c33376edd2c0" id="r_a79648fad4edaaa0ea564c33376edd2c0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a79648fad4edaaa0ea564c33376edd2c0">plot_container</a> = None</td></tr>
 <tr class="memitem:a40ced7de3cab48d58c93553d3800be3b" id="r_a40ced7de3cab48d58c93553d3800be3b"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a40ced7de3cab48d58c93553d3800be3b">num_runs_var</a> = tk.StringVar(value=&quot;500&quot;)</td></tr>
-<tr class="memitem:a3822324ef896924528e62127cf1516ae" id="r_a3822324ef896924528e62127cf1516ae"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a3822324ef896924528e62127cf1516ae">summary_text</a> = tk.Text(summary_inner, height=20, wrap=&quot;word&quot;)</td></tr>
-<tr class="memitem:a79648fad4edaaa0ea564c33376edd2c0" id="r_a79648fad4edaaa0ea564c33376edd2c0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a79648fad4edaaa0ea564c33376edd2c0">plot_container</a> = plot_frame</td></tr>
 <tr class="memitem:aa87e9eefcf141bfe28697282bd23a9de" id="r_aa87e9eefcf141bfe28697282bd23a9de"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa87e9eefcf141bfe28697282bd23a9de">extreme_runs_var</a> = tk.StringVar(value=&quot;500&quot;)</td></tr>
 <tr class="memitem:a7b197ed8bdbcf8097a6ae1ff26e94243" id="r_a7b197ed8bdbcf8097a6ae1ff26e94243"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7b197ed8bdbcf8097a6ae1ff26e94243">extreme_summary_text</a> = tk.Text(summary_inner, height=20, wrap=&quot;word&quot;)</td></tr>
 <tr class="memitem:adbbffceb9b6606d92e028af940a6eca1" id="r_adbbffceb9b6606d92e028af940a6eca1"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#adbbffceb9b6606d92e028af940a6eca1">extreme_plot_container</a> = plot_frame</td></tr>
@@ -141,16 +139,11 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8945fb5c765a8525ce45e40daabf2065" id="r_a8945fb5c765a8525ce45e40daabf2065"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8945fb5c765a8525ce45e40daabf2065">_build_tabs</a> (self)</td></tr>
-<tr class="memdesc:a8945fb5c765a8525ce45e40daabf2065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the tabbed interface for the application.  <br /></td></tr>
 <tr class="memitem:a779f1457bb1fa50d8f55c636b48c0967" id="r_a779f1457bb1fa50d8f55c636b48c0967"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a779f1457bb1fa50d8f55c636b48c0967">_build_widgets</a> (self, parent)</td></tr>
-<tr class="memdesc:a779f1457bb1fa50d8f55c636b48c0967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the primary simulation dashboard.  <br /></td></tr>
 <tr class="memitem:a61633bfee5719a0c083e20e04eeed9c7" id="r_a61633bfee5719a0c083e20e04eeed9c7"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a61633bfee5719a0c083e20e04eeed9c7">_build_extreme_widgets</a> (self, parent)</td></tr>
 <tr class="memitem:a67f25aa73b33a439ae78ad47aebbddc6" id="r_a67f25aa73b33a439ae78ad47aebbddc6"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a67f25aa73b33a439ae78ad47aebbddc6">_plot_distributions</a> (self, results)</td></tr>
-<tr class="memdesc:a67f25aa73b33a439ae78ad47aebbddc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the histogram display for extreme simulation results.  <br /></td></tr>
 <tr class="memitem:a51e7e587954e3cceaea5ff17ad8aa75d" id="r_a51e7e587954e3cceaea5ff17ad8aa75d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a51e7e587954e3cceaea5ff17ad8aa75d">_plot_extreme_distributions</a> (self, results)</td></tr>
-<tr class="memdesc:a51e7e587954e3cceaea5ff17ad8aa75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refreshes the histogram for extreme simulation results.  <br /></td></tr>
 <tr class="memitem:a9ac8fb9e7c9b79aac8a389fb85026221" id="r_a9ac8fb9e7c9b79aac8a389fb85026221"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9ac8fb9e7c9b79aac8a389fb85026221">_generate_parameters_summary</a> (self)</td></tr>
-<tr class="memdesc:a9ac8fb9e7c9b79aac8a389fb85026221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a formatted string summarizing all mission and battery constants.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">@brief Tkinter GUI for running nominal/extreme Monte Carlo simulations.
@@ -233,14 +226,12 @@ Provides:
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Constructs the tabbed interface for the application. </p>
-<p>Uses a ttk.Notebook to create three distinct sections:</p><ol type="1">
-<li>Simulation: For standard Monte Carlo runs.</li>
-<li>Parameters Summary: Displays a read-only text summary of battery profiles.</li>
-<li>Extreme Conditions: For high-stress "torture tests" with biased inputs </li>
-</ol>
-<div class="dynheader">
+<pre class="fragment">@brief Constructs the tabbed interface for the application.
+@details Uses a ttk.Notebook to create three distinct sections:
+    - Simulation: For standard Monte Carlo runs.
+    - Parameters Summary: Displays a read-only text summary of battery profiles.
+- Extreme Conditions: For high-stress "torture tests" with biased inputs.
+</pre> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classbattery_v2_1_1_monte_carlo_g_u_i_a8945fb5c765a8525ce45e40daabf2065_cgraph.svg" width="447" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
@@ -274,19 +265,13 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Builds the primary simulation dashboard. </p>
-<p>Sets up the 'Simulation' tab, which includes:</p><ul>
-<li>A 'Simulation Settings' group for configuring run counts.</li>
-<li>A 'Summary (Distribution)' group for displaying output statistics. <dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">parent</td><td>The parent widget (typically the simulation tab frame). </td></tr>
-  </table>
-  </dd>
-</dl>
-</li>
-</ul>
-
+<pre class="fragment">@brief Builds the primary simulation dashboard.
+@details Sets up the 'Simulation' tab, which includes:
+    - A 'Simulation Settings' group for configuring run counts.
+    - A 'Summary (Distribution)' group for displaying output statistics.
+    - A 'Distributions (Remaining Energy)' group for histogram plots.
+@param parent The parent widget (typically the simulation tab frame).
+</pre> 
 </div>
 </div>
 <a id="a9ac8fb9e7c9b79aac8a389fb85026221" name="a9ac8fb9e7c9b79aac8a389fb85026221"></a>
@@ -311,10 +296,11 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Generates a formatted string summarizing all mission and battery constants. </p>
-<p>Aggregates nominal/extreme sampling ranges, mission setup (distance, speed), and detailed battery profiles (capacity, penalties) for the UI summary tab. </p><dl class="section return"><dt>Returns</dt><dd>A multi-line string containing the full parameter report. </dd></dl>
-
+<pre class="fragment">@brief Generates a formatted string summarizing all mission and battery constants.
+@details Aggregates nominal/extreme sampling ranges, mission setup (distance, speed),
+and detailed battery profiles (capacity, penalties) for the UI summary tab.
+@return A multi-line string containing the full parameter report.
+</pre> 
 </div>
 </div>
 <a id="a67f25aa73b33a439ae78ad47aebbddc6" name="a67f25aa73b33a439ae78ad47aebbddc6"></a>
@@ -343,15 +329,11 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Updates the histogram display for extreme simulation results. </p>
-<p>Functionally identical to _plot_distributions but targets the Extreme Conditions UI container and uses biased result data. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">results</td><td>A dictionary containing extreme/biased simulation data. </td></tr>
-  </table>
-  </dd>
-</dl>
-
+<pre class="fragment"> @brief Updates the histogram display for extreme simulation results.
+    @details Functionally identical to _plot_distributions but targets the 
+    Extreme Conditions UI container and uses biased result data.
+    @param results A dictionary containing extreme/biased simulation data.
+</pre> 
 </div>
 </div>
 <a id="a51e7e587954e3cceaea5ff17ad8aa75d" name="a51e7e587954e3cceaea5ff17ad8aa75d"></a>
@@ -380,9 +362,13 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Refreshes the histogram for extreme simulation results. </p>
-
+<pre class="fragment">@brief Plots histograms of remaining energy (%) for each battery under extreme Monte Carlo results.
+@param results A dict keyed by battery label containing per-run result dicts (expects "energy_remaining_pct").
+@details
+    - Destroys and recreates the Tk canvas to avoid stacking plots.
+     Creates a matplotlib Figure and draws one histogram per battery.
+    - Embeds the figure into the Extreme Conditions tab container.
+</pre> 
 </div>
 </div>
 <a id="a611efd143a0180842632d13d81ce106c" name="a611efd143a0180842632d13d81ce106c"></a>
@@ -399,15 +385,13 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Constructs the "Extreme Conditions" dashboard. </p>
-<p>Sets up a high-stress testing environment including:</p><ul>
-<li>A 'Extreme Simulation Settings' frame for run count configuration.</li>
-<li>An informational label describing the "Extreme" stochastic biases (wind, temp, etc.).</li>
-<li>A scrollable summary text area for distribution results.</li>
-<li>A plot container for visualizing energy distributions. </li>
-</ul>
-<div class="dynheader">
+<pre class="fragment">@brief Constructs the "Extreme Conditions" dashboard.
+@details Sets up a high-stress testing environment including:
+    - An "Extreme Simulation Settings" frame for run count configuration.
+    - An informational label describing the "Extreme" stochastic biases (wind, temp, etc.).
+    - A scrollable summary text area for distribution results.
+    - A plot container for visualizing energy distributions.
+</pre> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classbattery_v2_1_1_monte_carlo_g_u_i_a611efd143a0180842632d13d81ce106c_cgraph.svg" width="100%" height="438"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
@@ -429,22 +413,15 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Executes the standard Monte Carlo simulation. </p>
-<p>Performs the following process:</p><ol type="1">
-<li>Validates user input for the number of runs.</li>
-<li>Calls <a class="el" href="namespacebattery_v2.html#a6767ab4344f7effdf944b81bcc495ead">run_monte_carlo()</a> to perform stochastic trials for each battery.</li>
-<li>Generates statistical summaries (mean, P5, P95) for mission results.</li>
-<li>Calculates energy usage metrics and delivery throughput.</li>
-<li>Performs a delta comparison if multiple batteries are configured. <dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">ValueError</td><td>Raised if the run count is not a positive integer. </td></tr>
-  </table>
-  </dd>
-</dl>
-</li>
-</ol>
-<div class="dynheader">
+<pre class="fragment">@brief Executes the standard Monte Carlo simulation.
+@details Performs the following process:
+    1. Validates user input for the number of runs.
+    2. Calls run_monte_carlo() to perform stochastic trials for each battery.
+    3. Generates statistical summaries (mean, P5, P95) for mission results.
+    4. Calculates energy usage metrics and delivery throughput.
+     5. Performs a delta comparison if multiple batteries are configured.
+@exception ValueError Raised if the run count is not a positive integer.
+</pre> <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="classbattery_v2_1_1_monte_carlo_g_u_i_ad20f02647e50ac7a533c9e72e8071130_cgraph.svg" width="100%" height="434"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
@@ -653,7 +630,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">batteryV2.MonteCarloGUI.plot_container = plot_frame</td>
+          <td class="memname">batteryV2.MonteCarloGUI.plot_container = None</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -681,7 +658,7 @@ Here is the call graph for this function:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">batteryV2.MonteCarloGUI.summary_text = tk.Text(summary_inner, height=20, wrap=&quot;word&quot;)</td>
+          <td class="memname">batteryV2.MonteCarloGUI.summary_text = None</td>
         </tr>
       </table>
 </div><div class="memdoc">
