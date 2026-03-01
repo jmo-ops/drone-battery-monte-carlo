@@ -1,4 +1,4 @@
-## @file drone_battery_monte_carlo.py
+## @file batteryV2.py
 #  @brief Monte Carlo simulation + GUI for comparing drone battery configurations.
 #
 #  This script runs a Monte Carlo process generator for two battery configurations
@@ -41,15 +41,20 @@ from matplotlib.figure import Figure
 # -----------------------------
 
 class BatteryConfig:
-    """
-    Battery configuration.
+    """!
+    @battery Battery configuration.
+    
+    @details Holds the parameters that define a battery’s nominal capacity and how
+    operating conditions (payload, wind, temperature) affect effective energy and power.
 
-    @var capacity_wh Nominal energy capacity (Wh)
-    @var base_power_w Baseline power draw (W)
-    @var payload_penalty_w_per_lb Added watts per lb payload
-    @var wind_penalty_w_per_mph Added watts per mph headwind
-    @var cold_capacity_penalty_per_deg Capacity loss fraction per °F below 70
-    @var cold_power_penalty_per_deg Power increase fraction per °F below 70
+    @var key  Short ID used internally.
+    @var label  Display name for plots/GUI.
+    @var capacity_wh  Nominal energy capacity (Wh).
+    @var base_power_w  Baseline cruise power draw (W).
+    @var payload_penalty_w_per_lb  Added watts per lb payload (W/lb).
+    @var wind_penalty_w_per_mph  Added watts per mph headwind (W/mph).
+    @var cold_capacity_penalty_per_deg  Fractional capacity loss per °F below 70°F.
+    @var cold_power_penalty_per_deg  Fractional power increase per °F below 70°F.
     """
     def __init__(self,
                  key: str,
@@ -60,6 +65,18 @@ class BatteryConfig:
                  wind_penalty_w_per_mph: float,
                  cold_capacity_penalty_per_deg: float,
                  cold_power_penalty_per_deg: float = 0.0):
+        """!
+        @brief Create a battery configuration.
+
+        @param key Short ID used internally.
+        @param label Display name for plots/GUI.
+        @param capacity_wh Nominal energy capacity (Wh).
+        @param base_power_w Baseline cruise power draw (W).
+        @param payload_penalty_w_per_lb Added power per lb payload (W/lb).
+        @param wind_penalty_w_per_mph Added power per mph headwind (W/mph).
+        @param cold_capacity_penalty_per_deg Fractional capacity loss per °F below 70°F.
+        @param cold_power_penalty_per_deg Fractional power increase per °F below 70°F.
+        """
         self.key = key
         self.label = label
         self.capacity_wh = capacity_wh
@@ -85,6 +102,13 @@ class MissionConfig:
                  nominal_distance_mi: float = 15.0,
                  cruise_speed_mph: float = 25.0,
                  safety_energy_fraction: float = 0.10):
+        """!
+        @brief Create a mission configuration.
+
+        @param nominal_distance_mi Baseline mission distance in miles.
+        @param cruise_speed_mph Cruise speed (mph), assumed constant.
+        @param safety_energy_fraction Fraction of capacity reserved as safety margin (0–1).
+        """
         self.nominal_distance_mi = nominal_distance_mi
         self.cruise_speed_mph = cruise_speed_mph
         self.safety_energy_fraction = safety_energy_fraction
@@ -115,15 +139,15 @@ def sample_extreme_inputs():
 
     Uses triangular distributions biased toward harsher conditions:
       - wind: 10–20 mph, skewed high
-      - temperature: 10–95 °F, skewed low (cold-biased)
-      - payload: 2.5–5 lb, skewed high
+      - temperature: 10–40 °F, skewed low (cold-biased)
+      - payload: 4–5 lb, skewed high
       - distance_factor: 1.0–1.1, skewed high
 
     @return (wind_mph, temp_f, payload_lb, distance_factor)
     """
     wind_mph = random.triangular(10.0, 20.0, 20.0)
-    temp_f = random.triangular(10.0, 95.0, 10.0)
-    payload_lb = random.triangular(2.5, 5.0, 5.0)
+    temp_f = random.triangular(10.0, 40.0, 10.0)
+    payload_lb = random.triangular(4, 5.0, 5.0)
     distance_factor = random.triangular(1.0, 1.1, 1.1)
     return wind_mph, temp_f, payload_lb, distance_factor
 
@@ -191,30 +215,63 @@ def simulate_mission(battery: BatteryConfig, mission: MissionConfig, rng_inputs=
     energy_available_for_mission_wh = cap_eff_wh - safety_threshold_wh
 
     success = energy_required_wh <= energy_available_for_mission_wh
-
     energy_remaining_wh = max(cap_eff_wh - energy_required_wh, 0.0)
     energy_remaining_pct = 100.0 * energy_remaining_wh / cap_eff_wh
-
     return {
         "battery": battery.label,
         "wind_mph": wind_mph,
         "temp_f": temp_f,
         "payload_lb": payload_lb,
         "distance_mi": distance_mi,
+        "cap_eff_wh": cap_eff_wh,                    # <-- add
+        "energy_required_wh": energy_required_wh,    # <-- add (this is "energy used this run")
+        "energy_remaining_wh": energy_remaining_wh,  # <-- optional but nice
         "energy_remaining_pct": energy_remaining_pct,
         "success": success,
     }
 
 
 def process_generator(num_runs: int, batteries, mission: MissionConfig):
-    """@brief Yield one simulation record at a time (nominal inputs)."""
+    """
+        @brief Generator that yields one simulation record at a time (nominal inputs).
+
+        Runs @p num_runs Monte Carlo iterations. In each iteration, it evaluates every
+        battery in @p batteries using the nominal mission inputs (no extreme-biased sampling).
+
+        @param num_runs Number of Monte Carlo iterations to execute.
+        @param batteries Iterable of BatteryConfig-like objects used by simulate_mission().
+                        Each item should represent one candidate battery option.
+        @param mission Mission configuration (payload, wind, temperature, etc.).
+
+        @yields dict One simulation record per (run, battery). The record is whatever
+                    simulate_mission() returns (commonly includes battery label/name,
+                    success flag, remaining energy/percent, etc.).
+    """
     for _ in range(num_runs):
         for battery in batteries:
-            yield simulate_mission(battery, mission)
+            rng_inputs = sample_random_inputs()
+            yield simulate_mission(battery, mission, rng_inputs=rng_inputs)
 
 
 def process_generator_extreme(num_runs: int, batteries, mission: MissionConfig):
-    """@brief Yield one simulation record at a time (extreme-biased inputs)."""
+    """
+    @brief Generator that yields one simulation record at a time (extreme-biased inputs).
+
+    Runs @p num_runs Monte Carlo iterations. In each iteration, it evaluates every
+    battery in @p batteries using mission inputs sampled from @ref sample_extreme_inputs
+    to bias conditions toward "extreme" scenarios.
+
+    @param num_runs Number of Monte Carlo iterations to execute.
+    @param batteries Iterable of BatteryConfig-like objects used by simulate_mission().
+                     Each item should represent one candidate battery option.
+    @param mission Mission configuration (payload, wind, temperature, etc.).
+
+    @yields dict One simulation record per (run, battery). The record is whatever
+                 simulate_mission() returns.
+
+    @see sample_extreme_inputs
+    @see simulate_mission
+    """
     for _ in range(num_runs):
         for battery in batteries:
             rng_inputs = sample_extreme_inputs()
@@ -222,7 +279,14 @@ def process_generator_extreme(num_runs: int, batteries, mission: MissionConfig):
 
 
 def run_monte_carlo(num_runs: int, batteries, mission: MissionConfig):
-    """@brief Run nominal Monte Carlo and collect results per battery label."""
+    """
+    @brief Run nominal Monte Carlo and collect results per battery label.
+
+    @param num_runs Number of Monte Carlo runs to generate.
+    @param batteries Iterable of battery objects (must have .label).
+    @param mission Mission configuration parameters.
+    @return Dict mapping battery label -> list of per-run records (dicts).
+    """
     results = {b.label: [] for b in batteries}
     for record in process_generator(num_runs, batteries, mission):
         results[record["battery"]].append(record)
@@ -230,7 +294,14 @@ def run_monte_carlo(num_runs: int, batteries, mission: MissionConfig):
 
 
 def run_monte_carlo_extreme(num_runs: int, batteries, mission: MissionConfig):
-    """@brief Run extreme-biased Monte Carlo and collect results per battery label."""
+    """
+    @brief Run EXTREME Monte Carlo and collect results per battery label.
+
+    @param num_runs Number of Monte Carlo runs to generate.
+    @param batteries Iterable of battery objects (must have .label).
+    @param mission Mission configuration parameters.
+    @return Dict mapping battery label -> list of per-run records (dicts).
+    """
     results = {b.label: [] for b in batteries}
     for record in process_generator_extreme(num_runs, batteries, mission):
         results[record["battery"]].append(record)
@@ -241,20 +312,41 @@ def summarize_results(records, battery_config: BatteryConfig, mission_config: Mi
     """
     @brief Compute summary distribution statistics for one battery’s records.
 
-    @return dict with mean/p5/p95 remaining %, success rate, averages, and deliveries estimate.
+    @param records Per-run result records for a single battery label.
+    @param battery_config Battery settings for the battery being summarized.
+    @param mission_config Mission settings for the runs being summarized.
+    @return dict Summary fields.
     """
     if not records:
         return None
 
-    remaining = [r["energy_remaining_pct"] for r in records]
+    remaining_pct = [r["energy_remaining_pct"] for r in records]
     successes = [1 if r["success"] else 0 for r in records]
     miles = [r["distance_mi"] for r in records]
     payloads = [r["payload_lb"] for r in records]
     successful_records = [r for r in records if r["success"]]
 
     def percentile(data, p):
+        """
+        @brief Compute the p-th percentile of a numeric dataset using linear interpolation.
+        @details
+            Sorts the input data and computes the percentile position using:
+                idx = (p / 100) * (n - 1)
+            If idx falls between two indices, performs linear interpolation.
+
+        Edge cases:
+          - If the dataset has 1 element, returns that element.
+          - Expects p in [0, 100]. (Values outside this range are not clamped.)
+
+        @param data Iterable of numeric values (list/tuple/etc.).
+        @param p Percentile to compute (0–100).
+        @return The percentile value as a float (or numeric type compatible with input).
+        @exception ValueError Raised if data is empty.
+        """
         data_sorted = sorted(data)
         n_local = len(data_sorted)
+        if n_local == 1:
+            return data_sorted[0]
         idx = (p / 100.0) * (n_local - 1)
         lower = math.floor(idx)
         upper = math.ceil(idx)
@@ -263,24 +355,40 @@ def summarize_results(records, battery_config: BatteryConfig, mission_config: Mi
         frac = idx - lower
         return data_sorted[lower] * (1 - frac) + data_sorted[upper] * frac
 
-    # Energy usage per mission
-    wh_used_list = []
-    for r in records:
-        cap_eff = effective_capacity_wh(battery_config, r["temp_f"])
-        remaining_wh = (r["energy_remaining_pct"] / 100.0) * cap_eff
-        wh_used_list.append(cap_eff - remaining_wh)
+    # ---- Energy metrics (prefer direct Wh from simulate_mission) ----
+    # If you added energy_required_wh + cap_eff_wh in simulate_mission, use them:
+    have_direct_wh = ("energy_required_wh" in records[0]) and ("cap_eff_wh" in records[0])
+
+    if have_direct_wh:
+        wh_used_list = [r["energy_required_wh"] for r in records]
+        cap_eff_list = [r["cap_eff_wh"] for r in records]
+    else:
+        # Fallback if you didn't store Wh: reconstruct from remaining_pct and cap_eff(temp)
+        wh_used_list = []
+        cap_eff_list = []
+        for r in records:
+            cap_eff = effective_capacity_wh(battery_config, r["temp_f"])
+            cap_eff_list.append(cap_eff)
+            remaining_wh = (r["energy_remaining_pct"] / 100.0) * cap_eff
+            wh_used_list.append(cap_eff - remaining_wh)
 
     avg_wh_per_trip = statistics.mean(wh_used_list) if wh_used_list else 0.0
-    usable_wh = battery_config.capacity_wh * (1 - mission_config.safety_energy_fraction)
-    missions_per_charge = (usable_wh / avg_wh_per_trip) if avg_wh_per_trip > 0 else 0.0
+    avg_cap_eff = statistics.mean(cap_eff_list) if cap_eff_list else 0.0
+
+    # Usable energy per charge should match the *effective* capacity conditions
+    avg_usable_wh = avg_cap_eff * (1.0 - mission_config.safety_energy_fraction)
+
+    missions_per_charge = (avg_usable_wh / avg_wh_per_trip) if avg_wh_per_trip > 0 else 0.0
     deliveries_per_charge = math.floor(missions_per_charge)
 
+    # ---- Distribution stats ----
     n = len(records)
-    mean_remaining = statistics.mean(remaining) if remaining else 0.0
-    p5_remaining = percentile(remaining, 5) if remaining else 0.0
-    p95_remaining = percentile(remaining, 95) if remaining else 0.0
+    mean_remaining = statistics.mean(remaining_pct) if remaining_pct else 0.0
+    p5_remaining = percentile(remaining_pct, 5) if remaining_pct else 0.0
+    p95_remaining = percentile(remaining_pct, 95) if remaining_pct else 0.0
     success_rate = (sum(successes) / n * 100.0) if n > 0 else 0.0
 
+    # ---- Operational averages ----
     avg_miles_all = statistics.mean(miles) if miles else 0.0
     avg_payload_all = statistics.mean(payloads) if payloads else 0.0
 
@@ -303,10 +411,12 @@ def summarize_results(records, battery_config: BatteryConfig, mission_config: Mi
         "total_runs": n,
         "successful_runs": sum(successes),
         "avg_wh_per_trip": avg_wh_per_trip,
+        "avg_cap_eff_wh": avg_cap_eff,                 # ✅ helpful to display/debug
+        "avg_usable_wh": avg_usable_wh,               # ✅ helpful to display/debug
         "deliveries_per_charge": deliveries_per_charge,
         "missions_per_charge": missions_per_charge,
     }
-
+    
 
 # -----------------------------
 # GUI
@@ -357,15 +467,20 @@ class MonteCarloGUI:
         self.canvas = None
         self.extreme_figure = None
         self.extreme_canvas = None
+        self.summary_text = None
+        self.plot_container = None
 
         self._build_tabs()
  
-    ## @brief Constructs the tabbed interface for the application.
-    #  @details Uses a ttk.Notebook to create three distinct sections:
-    #  1. Simulation: For standard Monte Carlo runs.
-    #  2. Parameters Summary: Displays a read-only text summary of battery profiles.
-    #  3. Extreme Conditions: For high-stress "torture tests" with biased inputs
+   
     def _build_tabs(self):
+        """
+        @brief Constructs the tabbed interface for the application.
+        @details Uses a ttk.Notebook to create three distinct sections:
+            - Simulation: For standard Monte Carlo runs.
+            - Parameters Summary: Displays a read-only text summary of battery profiles.
+        - Extreme Conditions: For high-stress "torture tests" with biased inputs.
+        """
         notebook = ttk.Notebook(self.root, style="Custom.TNotebook")
         style = ttk.Style(self.root)
         style.theme_use("clam")
@@ -400,28 +515,46 @@ class MonteCarloGUI:
         params_text.pack(fill="both", expand=True, padx=10, pady=10)
         params_text.insert(tk.END, self._generate_parameters_summary())
         params_text.configure(state="disabled")
- 
-    ## @brief Builds the primary simulation dashboard.
-    #  @details Sets up the 'Simulation' tab, which includes:
-    #  - A 'Simulation Settings' group for configuring run counts.
-    #  - A 'Summary (Distribution)' group for displaying output statistics.
-    #  @param parent The parent widget (typically the simulation tab frame).
+    
     def _build_widgets(self, parent):
+        """
+        @brief Builds the primary simulation dashboard.
+        @details Sets up the 'Simulation' tab, which includes:
+            - A 'Simulation Settings' group for configuring run counts.
+            - A 'Summary (Distribution)' group for displaying output statistics.
+            - A 'Distributions (Remaining Energy)' group for histogram plots.
+        @param parent The parent widget (typically the simulation tab frame).
+        """
         main_frame = ttk.Frame(parent, padding=10)
         main_frame.pack(fill="both", expand=True)
 
+        # --- Controls row ---
         controls = ttk.LabelFrame(main_frame, text="Simulation Settings")
         controls.pack(side="top", fill="x", pady=5)
 
-        ttk.Label(controls, text="Number of runs per battery:").grid(row=0, column=0, sticky="w", padx=5, pady=5)
+        ttk.Label(controls, text="Number of runs per battery:").grid(
+            row=0, column=0, sticky="w", padx=5, pady=5
+        )
         self.num_runs_var = tk.StringVar(value="500")
-        ttk.Entry(controls, textvariable=self.num_runs_var, width=10).grid(row=0, column=1, sticky="w", padx=5, pady=5)
+        ttk.Entry(controls, textvariable=self.num_runs_var, width=10).grid(
+            row=0, column=1, sticky="w", padx=5, pady=5
+        )
 
-        ttk.Button(controls, text="Run Simulation", command=self.run_simulation).grid(row=0, column=2, sticky="w", padx=10, pady=5)
+        ttk.Button(controls, text="Run Simulation", command=self.run_simulation).grid(
+            row=0, column=2, sticky="w", padx=10, pady=5
+        )
 
-        summary_frame = ttk.LabelFrame(main_frame, text="Summary (Distribution)")
-        summary_frame.pack(side="top", fill="both", expand=True, pady=5)
+        # --- Splitter (summary on top, plot on bottom) ---
+        paned = ttk.PanedWindow(main_frame, orient="vertical")
+        paned.pack(side="top", fill="both", expand=True, pady=5)
 
+        summary_frame = ttk.LabelFrame(paned, text="Summary (Distribution)")
+        plot_frame = ttk.LabelFrame(paned, text="Distributions (Remaining Energy)")
+
+        paned.add(summary_frame, weight=3)
+        paned.add(plot_frame, weight=2)
+
+        # --- Summary text + scrollbar ---
         summary_inner = ttk.Frame(summary_frame)
         summary_inner.pack(fill="both", expand=True, padx=5, pady=5)
 
@@ -432,10 +565,11 @@ class MonteCarloGUI:
         scrollbar.pack(side="right", fill="y")
         self.summary_text.configure(yscrollcommand=scrollbar.set)
 
-        plot_frame = ttk.LabelFrame(main_frame, text="Distributions (Remaining Energy)")
-        plot_frame.pack(side="top", fill="both", expand=True, pady=5)
+        # --- Plot container used by _plot_distributions() ---
         self.plot_container = plot_frame
+    
 
+  
     def _build_extreme_widgets(self, parent):
         main_frame = ttk.Frame(parent, padding=10)
         main_frame.pack(fill="both", expand=True)
@@ -471,17 +605,18 @@ class MonteCarloGUI:
         plot_frame = ttk.LabelFrame(main_frame, text="Extreme Distributions (Remaining Energy)")
         plot_frame.pack(side="top", fill="both", expand=True, pady=5)
         self.extreme_plot_container = plot_frame
-
-    ## @brief Executes the standard Monte Carlo simulation.
-    #  @details Performs the following process:
-    #  1. Validates user input for the number of runs.
-    #  2. Calls run_monte_carlo() to perform stochastic trials for each battery.
-    #  3. Generates statistical summaries (mean, P5, P95) for mission results.
-    #  4. Calculates energy usage metrics and delivery throughput.
-    #  5. Performs a delta comparison if multiple batteries are configured.
-    #  @exception ValueError Raised if the run count is not a positive integer.
-
+        
     def run_simulation(self):
+        """
+        @brief Executes the standard Monte Carlo simulation.
+        @details Performs the following process:
+            1. Validates user input for the number of runs.
+            2. Calls run_monte_carlo() to perform stochastic trials for each battery.
+            3. Generates statistical summaries (mean, P5, P95) for mission results.
+            4. Calculates energy usage metrics and delivery throughput.
+            5. Performs a delta comparison if multiple batteries are configured.
+        @exception ValueError Raised if the run count is not a positive integer.
+            """
         try:
             num_runs = int(self.num_runs_var.get())
             if num_runs <= 0:
@@ -497,63 +632,101 @@ class MonteCarloGUI:
 
         for battery in self.batteries:
             recs = results.get(battery.label, [])
+
+            # Battery section header (always)
+            self.summary_text.insert(tk.END, f"{battery.label} — Monte Carlo Results\n")
+
+            # Guard: no records
+            if not recs:
+                self.summary_text.insert(tk.END, "  No simulation records were generated.\n\n")
+                continue
+
+            # Summarize (guarded)
             summary = summarize_results(recs, battery_config=battery, mission_config=self.mission)
             if not summary:
+                self.summary_text.insert(tk.END, "  Unable to summarize results (empty/invalid records).\n\n")
                 continue
 
             summaries[battery.label] = summary
 
+            # --- Example single run (most recent) ---
+            last = recs[-1]
+
+            # These keys exist only if you added them to simulate_mission()
+            have_wh_fields = ("energy_required_wh" in last) and ("cap_eff_wh" in last)
+
+            if have_wh_fields:
+                self.summary_text.insert(
+                    tk.END,
+                    "  Example single run (most recent):\n"
+                    f"    Energy used this run: {last['energy_required_wh']:.1f} Wh\n"
+                    f"    Effective capacity this run: {last['cap_eff_wh']:.1f} Wh\n"
+                    f"    Remaining this run: {last['energy_remaining_pct']:.1f}%\n"
+                    f"    Inputs: wind={last['wind_mph']:.1f} mph, temp={last['temp_f']:.1f}°F, "
+                    f"payload={last['payload_lb']:.2f} lb, miles={last['distance_mi']:.2f}\n\n"
+                )
+            else:
+                self.summary_text.insert(
+                    tk.END,
+                    "  Example single run (most recent):\n"
+                    "    (Enable this by adding 'energy_required_wh' and 'cap_eff_wh' to simulate_mission() output.)\n\n"
+                )
+
+            # --- Main summary block ---
             self.summary_text.insert(
                 tk.END,
-                f"{battery.label} — Monte Carlo Results\n"
                 f"  Total simulation trials: {summary['total_runs']}\n"
-                f"  Successful mission trials (met reserve requirement): "
+                f"  Successful simulation runs (met reserve requirement): "
                 f"{summary['successful_runs']} / {summary['total_runs']} "
                 f"({summary['success_rate']:.1f}% success probability)\n\n"
-                f"  Remaining Energy Distribution:\n"
+                "  Remaining Energy Distribution:\n"
                 f"    Mean remaining energy: {summary['mean_remaining']:.1f}%\n"
                 f"    5th percentile remaining: {summary['p5_remaining']:.1f}%\n"
                 f"    95th percentile remaining: {summary['p95_remaining']:.1f}%\n\n"
-                f"  Operational Averages:\n"
+                "  Operational Averages:\n"
                 f"    Avg miles (all trials): {summary['avg_miles_all']:.2f} mi\n"
                 f"    Avg payload (all trials): {summary['avg_payload_all']:.2f} lb\n"
                 f"    Avg miles (successful only): {summary['avg_miles_success']:.2f} mi\n"
                 f"    Avg payload (successful only): {summary['avg_payload_success']:.2f} lb\n\n"
-                f"  Energy Use & Deliveries:\n"
+                "  Energy Use & Deliveries:\n"
                 f"    Avg energy used per mission: {summary['avg_wh_per_trip']:.1f} Wh\n"
                 f"    Missions per charge (float): {summary['missions_per_charge']:.2f}\n"
                 f"    Approx. deliveries per full charge (floor): {summary['deliveries_per_charge']}\n\n"
             )
+            if len(self.batteries) >= 2: ...
 
-        if len(self.batteries) >= 2:
-            a_name = self.batteries[0].label
-            b_name = self.batteries[1].label
-            if a_name in summaries and b_name in summaries:
-                A = summaries[a_name]
-                B = summaries[b_name]
-                self.summary_text.insert(
-                    tk.END,
-                    "=============================\n"
-                    "Li-ion vs LiPo  Comparison (Nominal)\n"
-                    "=============================\n"
-                    f"Δ Mean remaining (Li-ion - LiPo): {A['mean_remaining'] - B['mean_remaining']:.2f} %\n"
-                    f"Δ 5th pct remaining (Li-ion - LiPo): {A['p5_remaining'] - B['p5_remaining']:.2f} %\n"
-                    f"Δ 95th pct remaining (Li-ion - LiPo): {A['p95_remaining'] - B['p95_remaining']:.2f} %\n"
-                    f"Δ Avg Wh/mission (Li-ion - LiPo): {A['avg_wh_per_trip'] - B['avg_wh_per_trip']:.2f} Wh\n"
-                    f"Δ Missions/charge (Li-ion - LiPo): {A['missions_per_charge'] - B['missions_per_charge']:.2f}\n"
-                    f"Success rate A: {A['success_rate']:.1f}%   |   Success rate B: {B['success_rate']:.1f}%\n\n"
-                )
+            self._plot_distributions(results)
+            if len(self.batteries) >= 2:
+                a_name = self.batteries[0].label
+                b_name = self.batteries[1].label
+                if a_name in summaries and b_name in summaries:
+                    A = summaries[a_name]
+                    B = summaries[b_name]
+                    self.summary_text.insert(
+                        tk.END,
+                        "=============================\n"
+                        "Li-ion vs LiPo  Comparison (Nominal)\n"
+                        "=============================\n"
+                        f"Δ Mean remaining (Li-ion - LiPo): {A['mean_remaining'] - B['mean_remaining']:.2f} %\n"
+                        f"Δ 5th pct remaining (Li-ion - LiPo): {A['p5_remaining'] - B['p5_remaining']:.2f} %\n"
+                        f"Δ 95th pct remaining (Li-ion - LiPo): {A['p95_remaining'] - B['p95_remaining']:.2f} %\n"
+                        f"Δ Avg Wh/mission (Li-ion - LiPo): {A['avg_wh_per_trip'] - B['avg_wh_per_trip']:.2f} Wh\n"
+                        f"Δ Missions/charge (Li-ion - LiPo): {A['missions_per_charge'] - B['missions_per_charge']:.2f}\n"
+                        f"Success rate A: {A['success_rate']:.1f}%   |   Success rate B: {B['success_rate']:.1f}%\n\n"
+                    )
 
-        self._plot_distributions(results)
+            self._plot_distributions(results)
 
-    ## @brief Constructs the "Extreme Conditions" dashboard.
-    #  @details Sets up a high-stress testing environment including:
-    #  - A 'Extreme Simulation Settings' frame for run count configuration.
-    #  - An informational label describing the "Extreme" stochastic biases (wind, temp, etc.).
-    #  - A scrollable summary text area for distribution results.
-    #  - A plot container for visualizing energy distributions.
-    #  @param parent The parent frame (typically the Extreme Conditions tab).
+
     def run_extreme_simulation(self):
+        """
+        @brief Constructs the "Extreme Conditions" dashboard.
+        @details Sets up a high-stress testing environment including:
+            - An "Extreme Simulation Settings" frame for run count configuration.
+            - An informational label describing the "Extreme" stochastic biases (wind, temp, etc.).
+            - A scrollable summary text area for distribution results.
+            - A plot container for visualizing energy distributions.
+        """
         try:
             num_runs = int(self.extreme_runs_var.get())
             if num_runs <= 0:
@@ -623,11 +796,16 @@ class MonteCarloGUI:
 
         self._plot_extreme_distributions(results)
   
-    ## @brief Updates the histogram display for extreme simulation results.
-    #  @details Functionally identical to _plot_distributions but targets the 
-    #  Extreme Conditions UI container and uses biased result data.
-    #  @param results A dictionary containing extreme/biased simulation data.
+
     def _plot_distributions(self, results):
+        """ @brief Updates the histogram display for extreme simulation results.
+            @details Functionally identical to _plot_distributions but targets the 
+            Extreme Conditions UI container and uses biased result data.
+            @param results A dictionary containing extreme/biased simulation data.
+        """
+        print("plotting nominal:", {b.label: len(results[b.label]) for b in self.batteries})
+        print("plot_container exists:", self.plot_container.winfo_exists())
+        print("plot_container size:", self.plot_container.winfo_width(), self.plot_container.winfo_height())
         if self.canvas is not None:
             self.canvas.get_tk_widget().destroy()
             self.canvas = None
@@ -648,8 +826,17 @@ class MonteCarloGUI:
         self.canvas.draw()
         self.canvas.get_tk_widget().pack(fill="both", expand=True, padx=5, pady=5)
 
-    ## @brief Refreshes the histogram for extreme simulation results.
+ 
     def _plot_extreme_distributions(self, results):
+        """
+        @brief Plots histograms of remaining energy (%) for each battery under extreme Monte Carlo results.
+        @param results A dict keyed by battery label containing per-run result dicts (expects "energy_remaining_pct").
+        @details
+            - Destroys and recreates the Tk canvas to avoid stacking plots.
+             Creates a matplotlib Figure and draws one histogram per battery.
+            - Embeds the figure into the Extreme Conditions tab container.
+        """
+        
         if self.extreme_canvas is not None:
             self.extreme_canvas.get_tk_widget().destroy()
             self.extreme_canvas = None
@@ -670,11 +857,13 @@ class MonteCarloGUI:
         self.extreme_canvas.draw()
         self.extreme_canvas.get_tk_widget().pack(fill="both", expand=True, padx=5, pady=5)
 
-    ## @brief Generates a formatted string summarizing all mission and battery constants.
-    #  @details Aggregates nominal/extreme sampling ranges, mission setup (distance, speed), 
-    #  and detailed battery profiles (capacity, penalties) for the UI summary tab.
-    #  @return A multi-line string containing the full parameter report.
     def _generate_parameters_summary(self):
+        """
+        @brief Generates a formatted string summarizing all mission and battery constants.
+        @details Aggregates nominal/extreme sampling ranges, mission setup (distance, speed),
+        and detailed battery profiles (capacity, penalties) for the UI summary tab.
+        @return A multi-line string containing the full parameter report.
+        """
         return (
             "Environmental Ranges (per experiment)\n"
             "-------------------------------------\n"
@@ -715,15 +904,22 @@ class MonteCarloGUI:
         )
        
 def generate_docs():
-   """! Executes the Doxygen command to refresh documentation."""
-   try:
+    """
+    @brief Executes the Doxygen command to refresh documentation.
+    @details Runs 'doxygen Doxyfile' and prints a success/failure message.
+    """
+    try:
        subprocess.run(["doxygen", "Doxyfile"], check=True)
        print("Documentation generated successfully.")
-   except FileNotFoundError:
+    except FileNotFoundError:
        print("Error: Doxygen not found in system path.")
 
-## @brief Main entry point for the application.
+
 def main():
+    """
+    @brief Main entry point for the application.
+    @details Creates the Tk root window, instantiates the GUI, and enters the Tk event loop.
+    """
     root = tk.Tk()
     app = MonteCarloGUI(root)
     root.mainloop()
