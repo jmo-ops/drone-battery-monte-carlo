@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="..">
+      
       
       
         
@@ -19,7 +21,7 @@
     
     
       
-        <title>GUI - Drone Battery Monte Carlo Docs</title>
+        <title>Requirements - Drone Battery Monte Carlo Docs</title>
       
     
     
@@ -68,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gui" class="md-skip">
+        <a href="#requirements" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GUI
+              Requirements
             
           </span>
         </div>
@@ -224,10 +226,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../requirements/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -243,6 +272,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#req-001-payload-weight-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REQ-001 — Payload Weight Impact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#req-002-flight-distance-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REQ-002 — Flight Distance Impact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#req-003-trips-before-battery-end-of-life-eol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REQ-003 — Trips Before Battery End-of-Life (EOL)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements Traceability
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -301,10 +394,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#screenshots" class="md-nav__link">
+  <a href="#req-001-payload-weight-impact" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Screenshots
+        REQ-001 — Payload Weight Impact
       
     </span>
   </a>
@@ -312,144 +405,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gui-preview" class="md-nav__link">
+  <a href="#req-002-flight-distance-impact" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GUI preview
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="GUI preview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#extreme-conditions-tab" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Extreme Conditions tab
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tabs-and-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tabs and features
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tabs and features">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-simulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1) Simulation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-parameters-summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2) Parameters Summary
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-extreme-conditions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3) Extreme Conditions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3) Extreme Conditions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#extreme-simulation-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Extreme simulation settings
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-results-extreme-conditions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example results (Extreme Conditions)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example results (Extreme Conditions)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#li-ion-nmc-cylindrical-extreme-monte-carlo-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Li-ion (NMC, cylindrical) — EXTREME Monte Carlo Results
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lipo-pouch-high-power-extreme-monte-carlo-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LiPo (pouch, high-power) — EXTREME Monte Carlo Results
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#li-ion-vs-lipo-comparison-extreme" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Li-ion vs LiPo comparison (Extreme)
+        REQ-002 — Flight Distance Impact
       
     </span>
   </a>
@@ -457,10 +416,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#req-003-trips-before-battery-end-of-life-eol" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Troubleshooting
+        REQ-003 — Trips Before Battery End-of-Life (EOL)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements Traceability
       
     </span>
   </a>
@@ -484,107 +454,110 @@
 
 
 
-<h1 id="gui">GUI</h1>
-<p>The project includes a desktop GUI (Tkinter + matplotlib) that lets you run Monte Carlo simulations and compare two battery configurations across typical and extreme mission conditions.</p>
+<h1 id="requirements">Requirements</h1>
+<p>This page captures the system/model requirements for the Drone Battery Monte Carlo model and how each requirement is evaluated.</p>
 <hr />
-<h2 id="screenshots">Screenshots</h2>
-<p>```md</p>
-<h2 id="gui-preview">GUI preview</h2>
-<p><a href="../assets/gui/home.png"><img alt="GUI screenshot" src="../assets/gui/home.png" /></a></p>
-<h3 id="extreme-conditions-tab">Extreme Conditions tab</h3>
+<h2 id="req-001-payload-weight-impact">REQ-001 — Payload Weight Impact</h2>
+<p><strong>Requirement</strong><br />
+The model shall be able to determine the impact of battery draw on variable payload (0–5 lbs).</p>
+<p><strong>Assumptions / Constraints</strong>
+- Drone follows a fixed course.
+- Payload varies between <strong>0–5 lbs</strong>; all other variables held constant.
+- Assume <strong>0 lbs payload for return trips</strong> in battery calculations.</p>
+<p><strong>Question(s) Answered</strong>
+- How much does package weight impact battery draw?</p>
+<p><strong>Primary Variable</strong>
+- Payload Weight</p>
+<p><strong>Method</strong>
+- Baseline System Draw and Mass Penalty
+- Run <strong>X</strong> randomly generated runs with <strong>payload weight as the only variable</strong> to determine impact.
+- Monte Carlo analysis</p>
+<p><strong>Outputs / Acceptance Evidence</strong>
+- Payload Weight impact in terms of <strong>battery draw</strong> (e.g., watts, Wh, or voltage draw — use whichever your model reports consistently)</p>
+<p><strong>Validation Data Source</strong>
+- Battery Test Data Validation</p>
+<p><strong>Analysis Deliverable</strong>
+- Plot/table of draw vs. payload weight (0–5 lbs), with summary statistics (mean, min/max, percentile bands)</p>
 <hr />
-<h2 id="tabs-and-features">Tabs and features</h2>
-<h3 id="1-simulation">1) Simulation</h3>
-<p>Run the standard Monte Carlo simulation to compare <strong>Battery A vs Battery B</strong> under nominal sampling assumptions. The GUI produces:</p>
-<ul>
-<li>Text summary of results (success rate, remaining energy stats, operational averages)</li>
-<li>Distribution plots (remaining energy histograms)</li>
-</ul>
-<h3 id="2-parameters-summary">2) Parameters Summary</h3>
-<p>Shows the active parameters and model settings used during the run (battery parameters, mission config, penalties, and sampling ranges).</p>
-<h3 id="3-extreme-conditions">3) Extreme Conditions</h3>
-<p>Runs a deliberately <strong>biased</strong> Monte Carlo intended to stress the mission (high wind, low temperature, high payload, and slightly longer distance).</p>
-<h4 id="extreme-simulation-settings">Extreme simulation settings</h4>
-<ul>
-<li><strong>Number of runs per battery</strong> (example shown: 500)</li>
-<li>Biases:</li>
-<li>Wind: high-biased (10–20 mph)</li>
-<li>Temp: low-biased (10–95 °F)</li>
-<li>Payload: high-biased (2.5–5 lb)</li>
-<li>Distance factor: high-biased (1.0–1.1)</li>
-</ul>
+<h2 id="req-002-flight-distance-impact">REQ-002 — Flight Distance Impact</h2>
+<p><strong>Requirement</strong><br />
+The model shall be able to determine total trip battery draw over variable distance (1–15 miles roundtrip).</p>
+<p><strong>Assumptions / Constraints</strong>
+- Drone flies between <strong>1 and 15 miles per trip</strong> (roundtrip).
+- Battery draw across all subsystems remains constant (other than distance-driven energy usage).</p>
+<p><strong>Question(s) Answered</strong>
+- How many trips can the drone take on a single charge?</p>
+<p><strong>Primary Variable</strong>
+- Flight Distance</p>
+<p><strong>Method</strong>
+- Baseline System Draw and Mass Penalty
+- Run <strong>X</strong> randomly generated runs with <strong>flight distance as the only variable</strong> to determine impact.
+- Monte Carlo analysis</p>
+<p><strong>Outputs / Acceptance Evidence</strong>
+- Flight Distance impact in terms of <strong>battery draw</strong> (e.g., Wh consumed per trip / voltage draw)
+- Estimated <strong>trips per charge</strong> across the range</p>
+<p><strong>Validation Data Source</strong>
+- End-to-End Simulation</p>
+<p><strong>Analysis Deliverable</strong>
+- Plot/table of draw vs. flight distance (1–15 mi RT), plus computed trips-per-charge bands</p>
 <hr />
-<h2 id="example-results-extreme-conditions">Example results (Extreme Conditions)</h2>
-<p>Below is an example output captured from the GUI.</p>
-<h3 id="li-ion-nmc-cylindrical-extreme-monte-carlo-results">Li-ion (NMC, cylindrical) — EXTREME Monte Carlo Results</h3>
-<ul>
-<li>Total simulation trials: <strong>500</strong></li>
-<li>Successful mission trials (met reserve requirement): <strong>500 / 500 (100.0% success probability)</strong></li>
-</ul>
-<p><strong>Remaining Energy Distribution</strong>
-- Mean remaining energy: <strong>32.1%</strong>
-- 5th percentile remaining: <strong>16.5%</strong>
-- 95th percentile remaining: <strong>46.8%</strong></p>
-<p><strong>Operational Averages</strong>
-- Avg miles (all trials): <strong>16.01 mi</strong>
-- Avg payload (all trials): <strong>4.16 lb</strong>
-- Avg miles (successful only): <strong>16.01 mi</strong>
-- Avg payload (successful only): <strong>4.16 lb</strong></p>
-<p><strong>Energy Use &amp; Deliveries</strong>
-- Avg energy used per mission: <strong>168.3 Wh</strong>
-- Missions per charge (float): <strong>1.60</strong>
-- Approx. deliveries per full charge (floor): <strong>1</strong></p>
-<p><strong>Extreme input bias</strong>
-- Wind: high-biased (10–20 mph)<br />
-- Temp: low-biased (10–95 °F)<br />
-- Payload: high-biased (2.5–5 lb)<br />
-- Distance factor: high-biased (1.0–1.1)</p>
+<h2 id="req-003-trips-before-battery-end-of-life-eol">REQ-003 — Trips Before Battery End-of-Life (EOL)</h2>
+<p><strong>Requirement</strong><br />
+The model shall be able to determine the total number of trips achievable for each candidate battery before end-of-life (EOL).</p>
+<p><strong>Assumptions / Constraints</strong>
+- Drone flies between <strong>1 and 15 miles per trip</strong>.
+- Battery performance degrades with recharge cycles per the candidate battery specification / life-cycle model.</p>
+<p><strong>Question(s) Answered</strong>
+- Which candidate battery provides the greatest number of trips before EOL?</p>
+<p><strong>Primary Variable</strong>
+- N/A (comparative evaluation across batteries using their specs and recharge/lifecycle model)</p>
+<p><strong>Method</strong>
+- Battery specifications + number of recharges / lifecycle model
+- Run <strong>X</strong> randomly generated runs with different random inputs to determine which battery delivers the most trips
+- Monte Carlo analysis</p>
+<p><strong>Outputs / Acceptance Evidence</strong>
+- Total number of trips before battery EOL (per candidate battery)
+- Ranked comparison + confidence bands</p>
+<p><strong>Validation Data Source</strong>
+- Life Cycle Test Data</p>
+<p><strong>Analysis Deliverable</strong>
+- Comparison chart/table per battery: expected trips-to-EOL, percentiles, and sensitivity notes</p>
 <hr />
-<h3 id="lipo-pouch-high-power-extreme-monte-carlo-results">LiPo (pouch, high-power) — EXTREME Monte Carlo Results</h3>
-<ul>
-<li>Total simulation trials: <strong>500</strong></li>
-<li>Successful mission trials (met reserve requirement): <strong>500 / 500 (100.0% success probability)</strong></li>
-</ul>
-<p><strong>Remaining Energy Distribution</strong>
-- Mean remaining energy: <strong>29.4%</strong>
-- 5th percentile remaining: <strong>16.7%</strong>
-- 95th percentile remaining: <strong>42.1%</strong></p>
-<p><strong>Operational Averages</strong>
-- Avg miles (all trials): <strong>16.01 mi</strong>
-- Avg payload (all trials): <strong>4.18 lb</strong>
-- Avg miles (successful only): <strong>16.01 mi</strong>
-- Avg payload (successful only): <strong>4.18 lb</strong></p>
-<p><strong>Energy Use &amp; Deliveries</strong>
-- Avg energy used per mission: <strong>158.3 Wh</strong>
-- Missions per charge (float): <strong>1.48</strong>
-- Approx. deliveries per full charge (floor): <strong>1</strong></p>
-<p><strong>Extreme input bias</strong>
-- Wind: high-biased (10–20 mph)<br />
-- Temp: low-biased (10–95 °F)<br />
-- Payload: high-biased (2.5–5 lb)<br />
-- Distance factor: high-biased (1.0–1.1)</p>
-<hr />
-<h2 id="li-ion-vs-lipo-comparison-extreme">Li-ion vs LiPo comparison (Extreme)</h2>
-<ul>
-<li>Δ Mean remaining (Li-ion - LiPo): <strong>+2.66%</strong></li>
-<li>Δ 5th pct remaining (Li-ion - LiPo): <strong>-0.14%</strong></li>
-<li>Δ 95th pct remaining (Li-ion - LiPo): <strong>+4.70%</strong></li>
-<li>Δ Avg Wh/mission (Li-ion - LiPo): <strong>+9.94 Wh</strong></li>
-<li>Δ Missions/charge (Li-ion - LiPo): <strong>+0.13</strong></li>
-<li>Success rate A: <strong>100.0%</strong> | Success rate B: <strong>100.0%</strong></li>
-</ul>
-<p><strong>Interpretation (for this run):</strong>
-- Both batteries met the reserve requirement in all trials.
-- Li-ion shows a slightly higher <strong>average</strong> and <strong>upper-tail</strong> remaining energy under extreme-biased sampling.
-- LiPo used slightly less energy per mission in this run, but had lower remaining-energy margin overall.</p>
-<hr />
-<h2 id="troubleshooting">Troubleshooting</h2>
-<ul>
-<li>If plots don’t appear, verify Tkinter and matplotlib are installed and you’re running in a desktop environment.</li>
-<li>If the GUI opens but buttons do nothing, run from a terminal to capture tracebacks:
-  ```bash
-  python batteryV2.py</li>
-</ul>
+<h2 id="requirements-traceability">Requirements Traceability</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Primary Variable</th>
+<th>Method</th>
+<th>Validation Source</th>
+<th>Key Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REQ-001</td>
+<td>Payload weight (0–5 lbs)</td>
+<td>Monte Carlo (payload only variable)</td>
+<td>Battery test data</td>
+<td>Draw vs payload</td>
+</tr>
+<tr>
+<td>REQ-002</td>
+<td>Flight distance (1–15 mi RT)</td>
+<td>Monte Carlo (distance only variable)</td>
+<td>End-to-end simulation</td>
+<td>Draw vs distance, trips/charge</td>
+</tr>
+<tr>
+<td>REQ-003</td>
+<td>Battery candidate + lifecycle</td>
+<td>Monte Carlo (battery comparison)</td>
+<td>Life cycle test data</td>
+<td>Trips-to-EOL by battery</td>
+</tr>
+</tbody>
+</table>
 
 
 
