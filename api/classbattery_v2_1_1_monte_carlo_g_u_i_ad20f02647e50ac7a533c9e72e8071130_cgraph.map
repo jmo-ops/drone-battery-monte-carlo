@@ -1,5 +1,18 @@
 <map id="batteryV2.MonteCarloGUI.run_simulation" name="batteryV2.MonteCarloGUI.run_simulation">
-<area shape="rect" id="Node000001" title="Executes the standard Monte Carlo simulation." alt="" coords="5,5,200,48"/>
+<area shape="rect" id="Node000001" title="Executes the standard Monte Carlo simulation." alt="" coords="5,72,200,115"/>
 <area shape="rect" id="Node000002" href="$classbattery_v2_1_1_monte_carlo_g_u_i.html#a67f25aa73b33a439ae78ad47aebbddc6" title="Updates the histogram display for extreme simulation results." alt="" coords="248,5,424,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,24,232,24,232,29,200,29"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,69,243,50,245,55,180,74"/>
+<area shape="rect" id="Node000003" href="$namespacebattery_v2.html#a6767ab4344f7effdf944b81bcc495ead" title=" " alt="" coords="265,72,407,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,91,249,91,249,96,200,96"/>
+<area shape="rect" id="Node000008" href="$namespacebattery_v2.html#a0af7214a83432d16096b4812474093be" title=" " alt="" coords="494,131,639,173"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="190,113,248,124,368,138,478,146,478,151,368,143,247,129,188,118"/>
+<area shape="rect" id="Node000004" href="$namespacebattery_v2.html#ab0f783128b1bd9d942d65f8da46a1da8" title=" " alt="" coords="472,80,660,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="407,91,456,91,456,96,407,96"/>
+<area shape="rect" id="Node000005" href="$namespacebattery_v2.html#aecfb42e205fe14aa239afe1e5f5981cb" title=" " alt="" coords="708,72,839,115"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="661,91,693,91,693,96,661,96"/>
+<area shape="rect" id="Node000006" href="$namespacebattery_v2.html#affe6e1176611f2db495c2495e6bdd6ec" title=" " alt="" coords="908,131,1038,173"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="840,110,894,126,893,131,838,115"/>
+<area shape="rect" id="Node000007" href="$namespacebattery_v2.html#af248bd08982771567965a793c77a9ab3" title=" " alt="" coords="887,64,1060,107"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="839,88,871,87,871,92,839,93"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="639,149,893,149,893,155,639,155"/>
 </map>
