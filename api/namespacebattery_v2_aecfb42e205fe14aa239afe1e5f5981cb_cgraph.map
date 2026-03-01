@@ -1,0 +1,7 @@
+<map id="batteryV2.simulate_mission" name="batteryV2.simulate_mission">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,136,81"/>
+<area shape="rect" id="Node000002" href="$namespacebattery_v2.html#affe6e1176611f2db495c2495e6bdd6ec" title=" " alt="" coords="205,5,336,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,47,189,37,190,43,136,52"/>
+<area shape="rect" id="Node000003" href="$namespacebattery_v2.html#af248bd08982771567965a793c77a9ab3" title=" " alt="" coords="184,72,357,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,68,169,74,168,79,135,73"/>
+</map>
