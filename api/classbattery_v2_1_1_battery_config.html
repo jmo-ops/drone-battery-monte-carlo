@@ -128,15 +128,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab66a1bedb2a7f8a4bdc401b5b2578b39" id="r_ab66a1bedb2a7f8a4bdc401b5b2578b39"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab66a1bedb2a7f8a4bdc401b5b2578b39">cold_power_penalty_per_deg</a> = cold_power_penalty_per_deg</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Battery configuration.
-
-@var capacity_wh Nominal energy capacity (Wh)
-@var base_power_w Baseline power draw (W)
-@var payload_penalty_w_per_lb Added watts per lb payload
-@var wind_penalty_w_per_mph Added watts per mph headwind
-@var cold_capacity_penalty_per_deg Capacity loss fraction per °F below 70
-@var cold_power_penalty_per_deg Power increase fraction per °F below 70
-</pre> </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><pre class="fragment">Battery configuration.</pre> </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a01bd6c0552bae56729b044ed2ce12861" name="a01bd6c0552bae56729b044ed2ce12861"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a01bd6c0552bae56729b044ed2ce12861">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -190,18 +182,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Create a battery configuration.
 
-Args:
-key: Short ID used internally.
-label: Display name for plots/GUI.
-capacity_wh: Nominal energy capacity (Wh).
-base_power_w: Baseline cruise power draw (W).
-payload_penalty_w_per_lb: Added power per lb payload (W/lb).
-wind_penalty_w_per_mph: Added power per mph headwind (W/mph).
-cold_capacity_penalty_per_deg: Fractional capacity loss per deg below nominal.
-cold_power_penalty_per_deg: Extra power per deg below nominal.
-</pre> 
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>

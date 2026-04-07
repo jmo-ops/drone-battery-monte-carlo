@@ -36,15 +36,7 @@ Collaboration diagram for battery\+V2.\+Battery\+Config:\+\nopagebreak
 
 
 \doxysubsection{Detailed Description}
-\begin{DoxyVerb}Battery configuration.
-
-@var capacity_wh Nominal energy capacity (Wh)
-@var base_power_w Baseline power draw (W)
-@var payload_penalty_w_per_lb Added watts per lb payload
-@var wind_penalty_w_per_mph Added watts per mph headwind
-@var cold_capacity_penalty_per_deg Capacity loss fraction per °F below 70
-@var cold_power_penalty_per_deg Power increase fraction per °F below 70
-\end{DoxyVerb}
+\begin{DoxyVerb}Battery configuration.\end{DoxyVerb}
  
 
 \label{doc-constructors}
@@ -56,19 +48,7 @@ Collaboration diagram for battery\+V2.\+Battery\+Config:\+\nopagebreak
 {\footnotesize\ttfamily \label{classbattery_v2_1_1_battery_config_a01bd6c0552bae56729b044ed2ce12861} 
 battery\+V2.\+Battery\+Config.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{str}]{key}{, }\item[{str}]{label}{, }\item[{float}]{capacity\+\_\+wh}{, }\item[{float}]{base\+\_\+power\+\_\+w}{, }\item[{float}]{payload\+\_\+penalty\+\_\+w\+\_\+per\+\_\+lb}{, }\item[{float}]{wind\+\_\+penalty\+\_\+w\+\_\+per\+\_\+mph}{, }\item[{float}]{cold\+\_\+capacity\+\_\+penalty\+\_\+per\+\_\+deg}{, }\item[{float }]{cold\+\_\+power\+\_\+penalty\+\_\+per\+\_\+deg}{ = {\ttfamily 0.0}}\end{DoxyParamCaption})}
 
-\begin{DoxyVerb}Create a battery configuration.
 
-Args:
-key: Short ID used internally.
-label: Display name for plots/GUI.
-capacity_wh: Nominal energy capacity (Wh).
-base_power_w: Baseline cruise power draw (W).
-payload_penalty_w_per_lb: Added power per lb payload (W/lb).
-wind_penalty_w_per_mph: Added power per mph headwind (W/mph).
-cold_capacity_penalty_per_deg: Fractional capacity loss per deg below nominal.
-cold_power_penalty_per_deg: Extra power per deg below nominal.
-\end{DoxyVerb}
- 
 
 \label{doc-variable-members}
 \Hypertarget{classbattery_v2_1_1_battery_config_doc-variable-members}
